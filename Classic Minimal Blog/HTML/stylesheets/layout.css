@@ -1,0 +1,575 @@
+/*
+* Skeleton V1.2
+* Copyright 2011, Dave Gamache
+* www.getskeleton.com
+* Free to use under the MIT license.
+* http://www.opensource.org/licenses/mit-license.php
+* 6/20/2012
+*/
+
+/* Table of Content
+==================================================
+	#Site Styles
+	#Page Styles
+	#Media Queries
+	#Font-Face */
+
+/* #Site Styles
+================================================== */
+
+/* #Page Styles
+================================================== */
+
+/* #Media Queries
+================================================== */
+
+	/* Smaller than standard 960 (devices and browsers) */
+	@media only screen and (max-width: 959px) {}
+
+	/* Tablet Portrait size to standard 960 (devices and browsers) */
+	@media only screen and (min-width: 768px) and (max-width: 959px) {}
+
+	/* All Mobile Sizes (devices and browser) */
+	@media only screen and (max-width: 767px) {
+
+		header h1.logo {
+			position: relative;
+			left: 130px;
+		}
+
+		nav.primary {
+			left: 20px;
+			max-width: 300px;
+		}
+
+		nav.primary ul {
+			position: relative;
+			top: -225px;
+			left: 65px;
+			width: 150px;
+			text-align: center;
+		}
+
+		div.band {
+			display: block;
+			width: 100%;
+			height: 400px;
+			background-color: red;
+		}
+
+		ul#demo-nav {
+			max-width: 170px;
+		}
+
+		ul#demo-nav a {
+			position: relative;
+			left: 130px;
+			top: -100px; 
+			font-size: 20px;
+			float: left;
+			margin-bottom: -10px;
+		}
+
+	}
+
+	/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+	@media only screen and (min-width: 480px) and (max-width: 767px) {}
+
+	/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+	@media only screen and (max-width: 479px) {
+
+		header h1.logo {
+			position: relative;
+			left: 75px;
+		}
+	}
+
+
+/* #Font-Face
+================================================== */
+/* 	This is the proper syntax for an @font-face file
+		Just create a "fonts" folder at the root,
+		copy your FontName into code below and remove
+		comment brackets */
+
+/*	@font-face {
+	    font-family: 'FontName';
+	    src: url('../fonts/FontName.eot');
+	    src: url('../fonts/FontName.eot?iefix') format('eot'),
+	         url('../fonts/FontName.woff') format('woff'),
+	         url('../fonts/FontName.ttf') format('truetype'),
+	         url('../fonts/FontName.svg#webfontZam02nTh') format('svg');
+	    font-weight: normal;
+	    font-style: normal; }
+*/
+
+/*
+* Theme Name: Classic
+* Description: The 2013 default theme for Responsive HTML5
+* Author: Daniel Grigorov
+* Version: 1.0
+*/
+
+/* HEADING
+
+================================================== */
+
+div.band {
+	display: block;
+	width: 100%;
+	background-color: #000;
+}
+
+header.main {
+	padding: 35px 0;
+}
+
+header h1.logo {
+	margin: 7px 0 0 0;
+	float: left;
+}
+
+header h1.logo a {
+	text-decoration: none;
+	display: block;
+	font-size: 60%;
+	color: #fff;
+}
+
+/* NAVIGATION
+================================================== */
+
+div.band.navigation {
+	background: #f8f8f8;
+	border-bottom: 1px solid #ccc;
+	height: 45px;
+}
+
+nav.primary {
+	text-align: right;
+	position: relative;
+	top: -80px;
+	left: 10px;
+}
+
+nav.primary ul,
+nav.primary ul li {
+	margin: 0px;
+}
+
+nav.primary ul li {
+	display: inline;
+	font-size: 105%;
+}
+
+nav.primary ul li a {
+	display: inline-block;
+	line-height: 49px;
+	padding: 0 14px;
+	color: #ccc;
+	text-transform: uppercase;
+	text-decoration: none;
+	font-weight: 900;
+	letter-spacing: 0.08em;
+}
+
+nav.primary ul li a:hover {
+	color: #fff;
+	cursor: pointer;
+}
+
+ul#demo-nav {
+	text-align: right;
+	position: relative;
+	top: -33px;
+	left: -44px;
+}
+
+ul#demo-nav li {
+	display: inline;
+}
+
+ul#demo-nav a {
+	color: #555;
+	padding: 0.8em;
+	text-decoration: none;
+	font-weight: 700;
+}
+
+ul#demo-nav a:hover {
+	color: #000;
+	border-bottom: 1px solid #000;
+}
+
+/* THE POSTS
+================================================== */
+
+article div.container .title,
+article div.container .date {
+	text-align: center;
+}
+
+.embed-container {
+	text-align: center;
+}
+
+.embed-container img{
+	position: relative;
+	top: : 0;
+	left: 0;
+	max-width: 100%;
+}
+
+p.paragraph {
+	text-align: justify;
+}
+
+p.paragraph {
+	text-align: justify;
+}
+
+article img.more-btn {
+	max-width: 100%;
+	margin-top: 5px;
+}
+
+article a {
+	text-decoration: none;
+	color: #000;
+}
+
+article a:hover {
+	color: #bbb;
+	cursor: pointer;
+}
+
+span.rm{
+	position: relative;
+	top: -5px;
+	margin-left: 10px;
+}
+
+/* SOCIAL SHARE & PAGINATION
+================================================== */
+
+div.social-icons {
+	position: absolute;
+	max-width: 80%;
+	top: 10%;
+	left: 10%;
+	border-radius: 3px;
+}
+
+div.social-icons ul li {
+	float: left;
+	display: inline-block;
+}
+
+ul.social-icons li a {
+	display: block;
+	height: 41px;
+	width: 41px;
+	text-indent: -9999px;
+	margin: 0 10px 0 0;
+}
+
+ul.social-icons li {
+	background-image: url(../images/csg-51ba590c187a6.png);
+	background-repeat: no-repeat;
+	display: inline-block;
+	position: relative;
+	top: -47px;
+	padding: 0;
+	border-radius: 100%;
+	overflow: visible;
+
+}
+
+ul.social-icons li:hover {
+	background-image: url(../images/csg-51ba4174d5112.png);
+	background-repeat: no-repeat;
+}
+
+div.social-icons {
+	position: relative;
+	top: : 0;
+	left: 0;
+	max-width: 70%;
+}
+
+div.pagination,
+div.social-share {
+	margin: 20px 0;
+}
+
+div.pagination p,
+div.social-share p {
+	color: #111;
+	font-size: 17px;
+	font-weight: 900;
+}
+
+div.pagination ul,
+div.social-share ul {
+	display: inline-block;
+	margin-left: 0;
+	margin-bottom: 0;
+}
+
+div.pagination ul>li,
+div.social-share ul>li {
+	display: inline;
+}
+
+div.pagination ul>li>a,
+div.social-share ul>li>a {
+	float: left;
+	padding: 4px 12px;
+	line-height: 20px;
+	text-decoration: none;
+	font-weight: 900;
+}
+
+div.social-share ul>li>a {
+	float: left;
+	padding: 4px 0;
+	line-height: 20px;
+	text-decoration: none;
+	font-weight: 900;
+}
+
+div.pagination ul>li>a.prev {
+	display: block;
+	height: 29px;
+	width: 29px;
+	text-indent: -9999px;
+	margin: 0 10px 0 0;
+	background-image: url(../images/Chevron-Left.png);
+	background-repeat: no-repeat;
+	position: relative;
+	left: 20px;
+}
+
+div.pagination ul>li>a.next {
+	display: block;
+	height: 29px;
+	width: 29px;
+	text-indent: -9999px;
+	margin: 0 10px 0 0;
+	background-image: url(../images/Chevron-Right.png);
+	background-repeat: no-repeat;
+	position: relative;
+	left: 20px;
+}
+
+div.social-share ul>li>a>span.number-shares-t {
+	color: #fff;
+	position: relative;
+	left: 63px;
+	top: -4px;
+	z-index: 3;
+	font-size: 12px;
+}
+
+div.social-share ul>li>a>span.number-shares-f {
+	color: #fff;
+	position: relative;
+	left: 56px;
+	top: -5px;
+	z-index: 3;
+	font-size: 12px;
+}
+
+div.social-share ul>li>a>span.number-shares-p {
+	color: #fff;
+	position: relative;
+	left: 62px;
+	top: -7px;
+	z-index: 3;
+	font-size: 12px;
+}
+
+/* COMMENTS
+================================================== */
+
+div.comments div.profile-image {
+	border-radius: 50%;
+	width: 70px;
+	height: 70px;
+	background-color: #000; 
+}
+
+div.comments div.profile-image-df {
+	width: 71px;
+	height: 70px;
+	background-image: url(../images/df-logo.png); 
+	margin-left: 100px;
+	position: relative;
+	top: -25px;
+}
+
+div.comments div.reply {
+	width: 17px;
+	height: 13px;
+	background-image: url(../images/Reply.png); 
+}
+
+div.comments div#info {
+	width: 68.37607%;
+	position: relative;
+	left: 90px;
+	top: -55px;
+	text-decoration: none;
+}
+
+div.comments div#info span a {
+	margin-left: 20px;
+	color: black;
+}
+
+div.comments div#info p.name{
+	font-size: 150%;
+	color: black;
+	text-decoration: none;
+}
+
+div.comments div#info div.reply {
+	position: relative;
+	top: -20px;
+}
+
+div.comments div#second-comment div#info {
+	margin-left: 90px;
+	margin-top: -30px;
+}
+
+div.comments div#third-comment {
+	margin-top: -40px;
+}
+
+div#contact-form form textarea,
+div#contact-form form input {
+	border-radius: 3px;
+}
+
+div#contact-form form textarea{
+	width: 500px;
+}
+
+/* FOOTER
+================================================== */
+
+nav.footer {
+	clear: both;
+	padding: 8px 0 9px 0;
+	height: 20px;
+	overflow: hidden;
+}
+
+nav.footer ul,
+nav.footer ul li {
+	margin: 0px;
+}
+
+nav.footer ul li:first-child {
+	float: right;
+}
+
+nav.footer ul li {
+	display: inline;
+	float: left;
+	padding: 0;
+	font-size: 85%;
+}
+
+nav.footer ul li a {
+	display: inline-block;
+	padding: 0 6px;
+	color: #555;
+	text-decoration: none;
+	font-weight: bold;
+	letter-spacing: 0.08em;
+}
+
+nav.footer ul li a:hover {
+	color: #ccc;
+	cursor: pointer;
+}
+
+footer ul li a:hover {
+	color: #777;
+}
+
+footer ul.copyright {
+	position: relative;
+	float: right;
+	margin-right: 500px;
+	color: red;
+}
+
+/* ABOUT PAGE
+================================================== */
+
+div#column3_1,
+div#column-last {
+	float: left;
+	width: 221px;
+	margin-right: 90px;
+	margin-bottom: 48px;
+}
+
+div#column-down {
+	float: left;
+	width: 961px;
+	margin-right: auto;
+	margin-bottom: 48px;
+}
+
+div#column-last {
+	margin-right: 0px;
+}
+
+div#column-down {
+
+}
+
+div#column3_1 div.featured-circle,
+div#column-last div.featured-circle,
+div#column-down div.featured-circle {
+	text-align: center;
+}
+
+div#column3_1 div.featured-circle div.featured-circle-name,
+div#column-last div.featured-circle div.featured-circle-name,
+div#column-down div.featured-circle div.featured-circle-name {
+	color: #111;
+	font-size: 17px;
+	font-weight: 700;
+}
+
+div#column3_1 div.featured-circle div.featured-circle-position,
+div#column-last div.featured-circle div.featured-circle-position,
+div#column-down div.featured-circle div.featured-circle-position {
+	color: #555;
+	font-size: 14px;
+	font-weight: 700;
+}
+
+/***********************************************************************************************/
+/* Button */
+/***********************************************************************************************/
+.go-top {
+	position: fixed;
+	bottom: 2em;
+	right: 2em;
+	text-decoration: none;
+	color: white;
+	background-color: rgba(0, 0, 0, 0.3);
+	font-size: 12px;
+	padding: 1em;
+	display: none;
+}
+
+.go-top:hover {
+	background-color: rgba(0, 0, 0, 0.6);
+}
