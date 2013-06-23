@@ -414,7 +414,7 @@ div.comments div.reply {
 	background-image: url(../images/Reply.png); 
 }
 
-div.comments div#info {
+div.comments div.info {
 	width: 68.37607%;
 	position: relative;
 	left: 90px;
@@ -422,23 +422,23 @@ div.comments div#info {
 	text-decoration: none;
 }
 
-div.comments div#info span a {
+div.comments div.info span a {
 	margin-left: 20px;
 	color: black;
 }
 
-div.comments div#info p.name{
+div.comments div.info p.name{
 	font-size: 150%;
 	color: black;
 	text-decoration: none;
 }
 
-div.comments div#info div.reply {
+div.comments div.info div.reply {
 	position: relative;
 	top: -20px;
 }
 
-div.comments div#second-comment div#info {
+div.comments div#second-comment div.info {
 	margin-left: 90px;
 	margin-top: -30px;
 }
