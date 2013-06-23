@@ -510,8 +510,8 @@ footer ul.copyright {
 /* ABOUT PAGE
 ================================================== */
 
-div#column3_1,
-div#column-last {
+div.column3_1,
+div.column-last {
 	float: left;
 	width: 221px;
 	margin-right: 90px;
@@ -525,7 +525,7 @@ div#column-down {
 	margin-bottom: 48px;
 }
 
-div#column-last {
+div.column-last {
 	margin-right: 0px;
 }
 
@@ -533,22 +533,22 @@ div#column-down {
 
 }
 
-div#column3_1 div.featured-circle,
-div#column-last div.featured-circle,
+div.column3_1 div.featured-circle,
+div.column-last div.featured-circle,
 div#column-down div.featured-circle {
 	text-align: center;
 }
 
-div#column3_1 div.featured-circle div.featured-circle-name,
-div#column-last div.featured-circle div.featured-circle-name,
+div.column3_1 div.featured-circle div.featured-circle-name,
+div.column-last div.featured-circle div.featured-circle-name,
 div#column-down div.featured-circle div.featured-circle-name {
 	color: #111;
 	font-size: 17px;
 	font-weight: 700;
 }
 
-div#column3_1 div.featured-circle div.featured-circle-position,
-div#column-last div.featured-circle div.featured-circle-position,
+div.column3_1 div.featured-circle div.featured-circle-position,
+div.column-last div.featured-circle div.featured-circle-position,
 div#column-down div.featured-circle div.featured-circle-position {
 	color: #555;
 	font-size: 14px;
