@@ -40,7 +40,7 @@
   Add this to the theme's small footprint and you have a mobile-optimized blog.
 </p>
 
-<h3>Frank is for you</h3>
+<h3>Classic is for you</h3>
 <p>
   This theme is 100% open source and developer friendly. The theme is under the 
   <a href="http://www.gnu.org/copyleft/gpl.html">GNU Public License</a>.
