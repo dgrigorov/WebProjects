@@ -1,0 +1,517 @@
+/* ---------- RESET ---------- */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+input {
+  margin: 0;
+  padding: 0;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 100%;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+ul,
+ol,
+li {
+  list-style-type: none;
+}
+
+input,
+textarea {
+  outline: none;
+}
+
+strong {
+  font-weight: bold;
+}
+
+.fr {
+  float: right;
+}
+
+.fl {
+  float: left;
+}
+
+.cb {
+  clear: both;
+}
+
+a {
+  text-decoration: none;
+}
+
+p a,
+span a,
+h5 a {
+  color: #4599c8;
+}
+
+p a:hover,
+span a:hover,
+h5 a:hover {
+  color: #d14b4c;
+}
+
+.fancy-hr {
+  border: none;
+  height: 1px;
+  background: #e4e4e4;
+  -webkit-box-shadow: 0px 0px 7px #d7d7d7;
+  box-shadow: 0px 0px 7px #d7d7d7;
+  margin: 3em 0;
+}
+/* ---------- PARAMETRIC MIXINS ---------- */
+/* VARIABLES */
+/* ---------- GENERAL ---------- */
+body {
+  font: 14px/21px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #5b5b5b;
+}
+
+p,
+ul,
+ol {
+  margin-bottom: 1.5em;
+}
+
+p a,
+h5 a,
+span a,
+ul li a {
+  color: #de6d6e;
+  font-weight: bold;
+  -webkit-transition: all 0.1s ease-out;
+  -moz-transition: all 0.1s ease-out;
+  -ms-transition: all 0.1s ease-out;
+  -o-transition: all 0.1s ease-out;
+  transition: all 0.1s ease-out;
+  
+}
+
+hr {
+  border: none;
+  height: 1px;
+  border-top: 1px solid #e4e4e4;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: #2b3039;
+  line-height: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+h1 {
+  font-size: 32px;
+}
+
+h2 {
+  font-size: 26px;
+}
+
+h3 {
+  font-size: 21px;  
+}
+
+h4 {
+  font-size: 16px;
+  line-height: 42px;
+  height: 42px;  
+}
+h5 {
+  font-size: 14px;
+  font-weight: bold;
+}
+h6 {
+  color: #c9c9c9;
+  font-size: 12px;
+}
+blockquote {
+  font: italic 14px/1.5em Georgia, serif;
+  color: #c9c9c9;
+  background: transparent url('../images/blockquote-pattern.png') left top repeat-y;
+  padding-left: 2em;
+  margin: 1.5em 3em;
+}
+blockquote cite {
+  display: block;
+  font-size: 12px;
+  margin-top: 21px;
+  color: #5b5b5b;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* ---------- HEADER ---------- */
+html body header.main-header {
+  background-color: rgba(255,255,255,0.85);
+}
+
+html body header.main-header div.container div.row div.logo-container h1.logo {
+  margin-bottom: 0;
+}
+html body header.main-header div.container div.row div.logo-container {
+  padding-top: 1.5em;
+}
+
+/* ---------- MAIN NAV ---------- */
+html body header.main-header div.container div.row nav.main-navigation ul{
+	text-align: right;
+}
+
+html body header.main-header div.container div.row nav.main-navigation ul > li {
+  display: inline;
+}
+
+html body header.main-header div.container div.row nav.main-navigation ul > li a {
+  color: rgba(69,69,69,0.75)	;
+  font-size: 15px;
+  height: 63px;
+  line-height: 63px;
+  margin-right: 1em;
+  padding-right: 1em;
+  position: relative;
+  top: 10px;
+}
+
+html body header.main-header div.container div.row nav.main-navigation ul > li input {
+  position: relative;
+  top: 10px;
+  width: 80px;
+  background-color: #de6d6e;
+  border: 1px solid #de6d6e;
+  border-radius: 3px;
+  color: white;
+  padding-left: 8px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-right: 20px;
+  background-image: url(../img/login.png);
+  background-repeat: round;
+  background-position: 5px 5px;
+  cursor: pointer;
+  
+}
+
+html body header.main-header div.container div.row nav.main-navigation ul > li a:hover {
+  color: #2b3039;
+}
+
+html body header.main-header div.container div.row nav.main-navigation ul > li a::before {
+  position: absolute;
+  right: 0;
+  font-weight: normal;
+  color: #d2d6dd;
+}
+
+html body header.main-header div.container div.row nav.main-navigation ul > li:hover > ul {
+  opacity: 10;
+  filter: alpha(opacity=100);
+  visibility: visible;
+}
+
+html body header.main-header div.container div.row nav.main-navigation ul > li:hover > a {
+  color: #2b3039;
+}
+
+html body div.container div.row div.blockquote article {
+	text-align: center;
+	margin-bottom: 70px;
+}
+
+html body div.container div.row div.blockquote article p {
+	margin-top: -35px;
+}
+
+/*------- SERVICES -------*/
+
+
+html body div.container div.row div.mainFeatures {
+	position: relative;
+	left: 6%;
+	margin-bottom: 50px;
+}
+
+html body div.container div.row div.mainFeatures div.span2 {
+	margin-left: 70px;
+}
+
+html body div.container div.row div.mainFeatures div.span2 div.thumbnail a {
+	display: block;
+	width: 179px; 
+	height: 179px; 
+    -webkit-border-radius: 100px; 
+    -moz-border-radius: 100px;
+}
+
+html body div.container div.row div.mainFeatures div.span2 div.thumbnail a > p {
+	text-align: center;
+    padding-top: 130px;
+    color: white;
+    font-weight: 700;
+}
+
+html body div.container div.row div.mainFeatures div.span2 div.thumbnail a {
+	display: block;
+	width: 179px;
+	height: 179px;
+    background-image: url(../img/services-icons-sprite.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+html body div.container div.row div.mainFeatures div.span2 div.thumbnail a p:hover {
+	width: 179px; 
+	height: 179px;
+	background-color: white;
+	-webkit-border-radius: 100px; 
+    -moz-border-radius: 100px;
+    opacity: 0.5;
+    color: rgba(0,0,0,0.3);
+}
+
+html body div.container div.row div.mainFeatures div.span2 div.thumbnail a.tickets { 
+	background-color: #4eb9f4; 
+
+}
+
+html body div.container div.row div.mainFeatures div.span2 div.thumbnail a.camera { 
+	background-color: #6fc125;
+}
+
+html body div.container div.row div.mainFeatures div.span2 div.thumbnail a.beer { 
+	background-color: #ff5649; 
+}
+
+html body div.container div.row div.mainFeatures div.span2 div.thumbnail a.devices { 
+	background-color: #e48f23; 
+}
+
+html body div.container div.row div.mainFeatures div.span2 div.thumbnail p.caption {
+	display: none;
+}
+
+/* ---------- ARTICLES ---------- */
+html body div.container div.row div.article-container-fix {
+	margin-top: 50px;
+	float: left;
+}
+
+html body div.container div.row div.article-container-fix div.articles article header h1 {
+  margin-bottom: 0;
+  line-height: 50px;
+  font-size: 27px;
+}
+
+html body div.container div.row div.article-container-fix div.articles article h1 a {
+  color: #404040;
+}
+
+html body div.container div.row div.article-container-fix div.articles article h1 a:hover {
+  color: #de6d6e;
+}
+
+html body div.container div.row div.article-container-fix div.articles article figure.article-preview-image {
+  float: left;
+  margin-right: 2em;
+  margin-bottom: 50px;
+}
+
+/* ---------- FOOTER ---------- */
+html body footer div.footer-widget-area {
+  background-image: url(../img/footer-background.png);
+  padding: 3em 0;
+  margin-top: 3em;
+}
+
+html body footer div.footer-widget-area div.container div.row div.span2 div.footer-sidebar-widget h4 {
+	color: #aeaeae;
+	font-weight: 700;
+	font-size: 21px;
+	margin-bottom: 0;
+}
+
+html body footer div.footer-widget-area div.container div.row div.span2 div.footer-sidebar-widget ul > li > a {
+	color: #8b8b8b;
+	font-size: 15px;
+}
+
+html body footer div.footer-widget-area div.container div.row div.span2 div.footer-sidebar-widget ul > li > a:hover {
+	text-transform: uppercase;
+	color: #fff;
+}
+
+html body footer div.footer-widget-area div.container div.row div.span4 div.footer-sidebar-widget ul.social-icons li {
+	float: left;
+	padding: 0 5px;
+}
+
+html body footer div.footer-widget-area div.container div.row div.span4 div.footer-sidebar-widget ul.social-icons ul li {
+	float: left;
+	display: inline-block;
+	height: 50px;
+	width: 40px;
+}
+
+html body footer div.footer-widget-area div.container div.row div.span4 div.footer-sidebar-widget ul.social-icons li a {
+	text-indent: -9999px;
+	display: inline-block;
+	padding: 0;
+	border-radius: 100%;
+	overflow: visible;
+}
+
+html body footer div.footer-widget-area div.container div.row div.span4 div.footer-sidebar-widget ul.social-icons li {
+	background-image: url(../img/csg-51cb512d9ec8c.png);
+	background-repeat: no-repeat;
+	display: inline-block;
+	margin-left: 25px;
+	border-radius: 100%;
+}
+
+html body footer div.footer-widget-area div.container div.row div.span4 div.footer-sidebar-widget ul.social-icons li:hover {
+	background-image: url(../img/csg-51cb519beb18b.png);
+	background-repeat: no-repeat;
+	cursor: pointer;
+}
+
+html body footer div.footer-widget-area div.container div.row span.copyright {
+	text-align: right;
+	position: relative;
+	top: 10px;
+	left: 55px;
+	color: #8b8b8b;
+}
