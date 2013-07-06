@@ -1,0 +1,715 @@
+/* ---------- RESET ---------- */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+input {
+  margin: 0;
+  padding: 0;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 100%;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+ul,
+ol,
+li {
+  list-style-type: none;
+}
+
+input,
+textarea {
+  outline: none;
+}
+
+strong {
+  font-weight: bold;
+}
+
+.fr {
+  float: right;
+}
+
+.fl {
+  float: left;
+}
+
+.cb {
+  clear: both;
+}
+
+a {
+  text-decoration: none;
+}
+
+p a,
+span a,
+h5 a {
+  color: #f8bd75;
+}
+
+p a:hover,
+span a:hover,
+h5 a:hover {
+  color: #f8d3a6;
+}
+
+.fancy-hr {
+  border: none;
+  height: 1px;
+  background: #e4e4e4;
+  -webkit-box-shadow: 0px 0px 7px #d7d7d7;
+  box-shadow: 0px 0px 7px #d7d7d7;
+  margin: 3em 0;
+}
+
+img {
+  max-width: 100%;
+}
+/* ---------- PARAMETRIC MIXINS ---------- */
+/* VARIABLES */
+/* ---------- GENERAL ---------- */
+body {
+  font: 14px/21px 'Titillium Web', sans-serif;
+  background-color: #87509c;
+}
+
+ul,
+ol {
+  margin-bottom: 1.5em;
+}
+
+p a,
+h5 a,
+span a{
+  color: #efb978;
+  font-weight: bold;
+  -webkit-transition: all 0.1s ease-out;
+  -moz-transition: all 0.1s ease-out;
+  -ms-transition: all 0.1s ease-out;
+  -o-transition: all 0.1s ease-out;
+  transition: all 0.1s ease-out;
+  
+}
+
+hr {
+  border: none;
+  height: 1px;
+  border-top: 1px solid #e4e4e4;
+  margin: 0;
+}
+
+h1 {
+  margin-bottom: 0.5em;
+}
+
+h2,
+h3,
+h4 {
+  color: #2b3039;
+  line-height: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+
+h2 {
+  font-size: 26px;
+}
+
+h3 {
+  font-size: 21px;  
+}
+
+h4 {
+  font-size: 16px;
+  line-height: 42px;
+  height: 42px;  
+}
+h5 {
+  font-size: 24px;
+  margin: 15px 0;
+}
+h6 {
+  color: #c9c9c9;
+  font-size: 12px;
+}
+blockquote {
+  font: italic 18px 'Titillium Web', sans-serif;
+  color: #fff;
+  background: transparent url('../images/blockquote-pattern.png') left top repeat-y;
+  padding-left: 2em;
+  margin: 1.5em 3em;
+}
+blockquote cite {
+  display: block;
+  font-size: 12px;
+  margin-top: 21px;
+  color: #5b5b5b;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* ---------- HEADER ---------- */
+
+html body header.main-header div.container div.row div.logo-container {
+  padding-top: 1.5em;
+}
+
+/* ---------- MAIN NAV ---------- */
+html body header.main-header div.container div.row nav.main-navigation ul#menu { 
+  padding:0; 
+  margin: 15px 0;
+  float: right;
+}
+
+html body header.main-header div.container div.row nav.main-navigation ul#menu a {
+  display: inline-block;
+  text-transform: uppercase;
+  padding: 7px;
+  font-size: 14px;
+  margin-top: 10px;
+  color: #fff;
+  font-family: 16px 'Titillium Web', sans-serif;
+  font-weight: normal;
+}
+
+html body header.main-header div.container div.row nav.main-navigation ul#menu a.current {
+  background-color: #643a79;
+  border-radius: 5px;
+}
+
+html body header.main-header div.container div.row nav.main-navigation ul#menu a:hover {
+  background-color: #643a79;
+  border-radius: 5px;
+}
+ 
+html body header.main-header div.container div.row nav.main-navigation ul#menu li {
+  display:block; 
+  float:left;
+  padding-left: 15px;
+  line-height: 15px;
+}
+
+/*------- ALL PAGES -------*/
+html body header.main-header div.first-page div.container div.jumbotron,
+html body header.main-header div.second-page div.container div.services-header,
+html body header.main-header div.third-page div.container div.team-header,
+html body header.main-header div.fourth-page div.container div.skills-header,
+html body header.main-header div.third-page div.container div.slider-features,
+html body header.main-header div.sixth-page div.container div.about-header,
+html body header.main-header div.seventh-page div.container div.contacts-header,
+html body header.main-header div.fifth-page div.container div.portfolio-header {
+  margin: 80px 0;
+  text-align: center;
+  position: relative;
+}
+
+
+html body header.main-header div.first-page div.container div.jumbotron h1,
+html body header.main-header div.second-page div.container div.services-header h1,
+html body header.main-header div.sixth-page div.container div.about-header h1,
+html body header.main-header div.seventh-page div.container div.contacts-header h1 {
+  color: #fff;
+  text-align: center;
+  font-size: 50px;
+  font-family:'Titillium Web', sans-serif;
+  font-weight: 900;
+  line-height: 62px;
+  padding-top: 50px;
+}
+
+html body header.main-header div.second-page div.container div.services-header img,
+html body header.main-header div.third-page div.container div.team-header img,
+html body header.main-header div.fourth-page div.container div.skills-header img,
+html body header.main-header div.fifth-page div.container div.portfolio-header img,
+html body header.main-header div.sixth-page div.container div.about-header img,
+html body header.main-header div.seventh-page div.container div.contacts-header img {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=15)";
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=15);
+  opacity: .15;
+  margin: 0 0 20px 0;
+}
+
+html body header.main-header div.second-page div.container div.services-header p,
+html body header.main-header div.sixth-page div.container div.about-header p,
+html body header.main-header div.seventh-page div.container div.contacts-header p {
+  color: #fff;
+  font-weight: normal;
+  font-size: 18px;
+}
+
+/*------- BUTTON -------*/
+html body div.jumbotron a.btn {
+  font-size: 24px;
+  font-weight: 600;
+  padding: 14px 44px;
+}
+
+html body div.jumbotron a.btn-wwu {
+  color: #fff;
+  background-color: #eb7d4b;
+  border-bottom: 4px solid #c86a40;
+  border-radius: 3px;
+  line-height: 180px;
+}
+
+/*------- SECOND PAGE -------*/
+html body header.main-header div.second-page {
+  background-color: #17c2a4;
+}
+
+html body header.main-header div.second-page div.container div.slider-features div.row div.span3 p {
+  font-size: 17px;
+  color: #fff;
+}
+
+html body header.main-header div.second-page div.container div.slider-features {
+  text-align: center;
+  color: #fff;
+}
+
+html body header.main-header div.second-page div.container div.slider-features h5,
+html body header.main-header div.third-page div.container div.slider-features h5 {
+  font-weight: 700;
+}
+
+html body header.main-header div.second-page div.container div.slider-features div.row div.span3 img {
+  margin: 10px 0;
+}
+
+/* ---------- THIRD PAGE ---------- */
+html body header.main-header div.third-page {
+  background-color: #e7f1f8;
+}
+
+html body header.main-header div.third-page div.container div.team-header h1,
+html body header.main-header div.fourth-page div.container div.skills-header h1 {
+  color: #3c4761;
+  text-align: center;
+  font-size: 50px;
+  font-family:'Titillium Web', sans-serif;
+  font-weight: 900;
+  line-height: 62px;
+  padding-top: 50px;
+}
+
+html body header.main-header div.third-page div.container div.team-header p {
+  color: #3c4761;
+  font-weight: normal;
+  font-size: 18px;
+}
+
+html body header.main-header div.third-page div.container div.slider-features h5 {
+  color: #3c4761;
+  margin: 10px 0;
+  text-transform: uppercase;
+}
+
+html body header.main-header div.third-page div.container div.slider-features div.row div.span3 p.profession {
+  color: #30bae7;
+  margin: 10px 0;
+  font-weight: 600;
+}
+
+html body header.main-header div.third-page div.container div.slider-features div.row div.span3 p.empl-info {
+  font-weight: 600;
+  color: #3c4761;
+  font-size: 16px;
+}
+
+html body header.main-header div.third-page div.container div.slider-features div.row div.span3 ul.social-icons a {
+  display: inline-block;
+  text-indent: -999em;
+  height: 32px;
+  width: 32px;
+}
+
+html body header.main-header div.third-page div.container div.slider-features div.row div.span3 ul.social-icons li {
+  background-image: url(../img/contacts-sprite.png);
+  background-repeat: no-repeat;
+  background-position: top left;
+  display: inline-block;
+  margin: 15px 0 0 5px;
+  border-radius: 100%;
+}
+
+html body header.main-header div.third-page div.container div.slider-features div.row div.span3 ul.social-icons li:hover {
+  opacity: 0.7;
+}
+
+
+/* ---------- FOURTH PAGE ---------- */
+html body header.main-header div.fourth-page {
+  background-color: #fff;
+}
+
+html body header.main-header div.fourth-page div.container div.skills-header p {
+  color: #3c4761;
+  font-weight: normal;
+  font-size: 18px;
+}
+
+html body header.main-header div.container div.slider-features {
+  margin-bottom: 70px;
+}
+
+html body header.main-header div.fourth-page div.container div.slider-features div.row div.span3 span.percent {
+  color: #3c4761;
+  font-size: 50px;
+  position: relative;
+  left: -122px;
+  top: -68px;
+}
+
+html body header.main-header div.fourth-page div.container div.slider-features div.row div.span3 h5 {
+  font-weight: 900;
+  color: #3c4761;
+  margin-left: 20px;
+}
+
+/* ---------- FIFTH PAGE ---------- */
+html body header.main-header div.fifth-page {
+  background-color: #ffdd99;
+}
+
+html body header.main-header div.fifth-page div.container div.portfolio-header h1 {
+  color: #393939;
+  text-align: center;
+  font-size: 50px;
+  font-family:'Titillium Web', sans-serif;
+  font-weight: 900;
+  line-height: 62px;
+  padding-top: 50px;
+}
+
+html body header.main-header div.fifth-page div.container div.portfolio-header div.categories {
+  margin: 40px 0;
+}
+
+html body header.main-header div.fifth-page div.container div.portfolio-header p {
+  color: #393939;
+  font-size: 18px;
+}
+
+html body header.main-header div.fifth-page div.container div.portfolio-header div.categories a {
+  color: #393939;
+  font-size: 16px;
+  padding: 3px 10px 3px 10px;
+  margin-left: 10px;
+  background-color: #ebc985;
+  border-radius: 5px;
+}
+
+html body header.main-header div.fifth-page div.container div.portfolio-header div.categories a.current {
+  padding-left: 15px;
+  color: #393939;
+  font-size: 17px;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+html body header.main-header div.fifth-page div.container div.portfolio-header div.categories a:hover {
+  color: #393939;
+  font-size: 17px;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+html body header.main-header div.fifth-page div.container div.slider-features div.row div.down-works {
+  margin-top: 40px;
+}
+
+html body header.main-header div.fifth-page div.container div.slider-features div.row div.span6 p {
+  font-size: 18px;
+  text-align: center;
+  margin: 15px 0;
+  color: #393939;
+  font-weight: 600;
+}
+
+html body header.main-header div.fifth-page div.container div.slider-features div.more-projects {
+  text-align: center;
+}
+
+html body header.main-header div.fifth-page div.container div.slider-features div.more-projects > a.more-projects {
+  background-color: #17c2a4;
+  border-radius: 5px;
+  border-bottom: 4px solid #14a58c;
+  padding: 5px 20px 5px 20px;
+  color: #fff;
+  font-size: 18px;
+}
+
+header.main-header div.fifth-page div.container div.slider-features div.more-projects a.btn {
+  font-size: 24px;
+  font-weight: 600;
+  padding: 14px 44px;
+}
+
+header.main-header div.fifth-page div.container div.slider-features div.more-projects a.btn-mp {
+  color: #fff;
+  background-color: #17c2a4;
+  border-bottom: 4px solid #14a58c;
+  border-radius: 3px;
+  line-height: 180px;
+}
+
+/* ---------- SIXTH PAGE ---------- */
+html body header.main-header div.sixth-page {
+  background-color: #d74680;
+}
+
+html body header.main-header div.sixth-page div.container div.slider-features div.row div.span5 div.cite h5 {
+  color: #fff;
+  font-weight: 900;
+}
+
+html body header.main-header div.sixth-page div.container div.slider-features div.row div.span5 div.cite p.blockquote {
+  font: italic 18px 'Titillium Web', sans-serif;
+  color: #fff;
+  width: 358px;
+}
+
+html body header.main-header div.sixth-page div.container div.slider-features div.row div.span5 div.profile-image {
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  background-color: #787878; 
+}
+
+html body header.main-header div.sixth-page div.container div.slider-features div.row div.span5 div.testimonial {
+  width: 336px;
+  position: relative;
+  left: 100px;
+  top: -70px;
+  text-decoration: none;
+}
+
+html body header.main-header div.sixth-page div.container div.slider-features div.row div.span5 div.testimonial p.name {
+  font-size: 150%;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+html body header.main-header div.sixth-page div.container div.slider-features div.row div.span5 div.testimonial p.proffesion {
+  color: #ffdd99;
+}
+
+html body header.main-header div.sixth-page div.container div.slider-features div.row div.span5 div.testimonial p.testimonial {
+  font: italic 18px 'Titillium Web', sans-serif;
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+/* ---------- SEVENTH PAGE ---------- */
+html body header.main-header div.seventh-page {
+  background-color: #3c5499;
+}
+
+html body header.main-header div.seventh-page div.container div.contacts-header form {
+  margin: 50px 0;
+}
+
+html body header.main-header div.seventh-page div.container div.contacts-header form input[type="text"] {
+  background-color: #273a71;
+  border-radius: 5px;
+  border: 0px;
+  width: 414px;
+  height: 56px;
+  margin: 0 0 20px 20px;
+  padding: 20px;
+  color: #fff;
+  font-size: 17px;
+}
+
+html body header.main-header div.seventh-page div.container div.contacts-header form textarea {
+  background-color: #273a71;
+  border-radius: 5px;
+  border: 0px;
+  margin: 0 0 20px 20px;
+  padding: 20px;
+  font: 17px 'Titillium Web', sans-serif;
+  color: #fff;
+  resize:both;
+}
+
+html body header.main-header div.seventh-page div.container div.contacts-header form input[type="submit"] {
+  background-color: #30bae7;
+  border-radius: 5px;
+  border: none;
+  border-bottom: 4px solid #299ec5;
+  margin: 30px 0 20px 20px;
+  padding: 15px 40px 15px 40px;
+  color: #fff;
+  font-size: 17px;
+  cursor: pointer;
+}
+
+::-webkit-input-placeholder { 
+  color:#fff; 
+  font-size: 17px; 
+}
+
+::-moz-placeholder { 
+  color:#fff; 
+  font-size: 17px; 
+} /* firefox 19+ */
+
+:-ms-input-placeholder { 
+  color:#fff; 
+  font-size: 17px; 
+} /* ie */
+
+input:-moz-placeholder { 
+  color:#fff; 
+  font-size: 17px;
+}
+
+/* ---------- FOOTER ---------- */
+html body footer {
+  background-color: #344b8e;
+}
+
+html body footer div.container {
+  text-align: center;
+  padding: 25px 25px;
+}
+
+html body footer div.container a {
+  color: #fff;
+  font-weight: 700;
+  font-size: 24px;
+  padding: 15px 0 0 50px;
+}
+
+html body footer div.container a:hover {
+  color: #30bae7;
+}
