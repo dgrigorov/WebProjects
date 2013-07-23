@@ -83,20 +83,8 @@
 
 <hr />
 
-<h2 id="psd">3. PSD File</h2>
 
-<p>Included in this theme is one PSD file:</p>
-
-<ol>
-<li>Cuda Single Page Portfolio.psd</li>
-</ol>
-
-
-<p>This PSD file will be handy if you would like to make any changes to the theme&rsquo;s design. You can also create a new page layout using the existing PSD files as a base to work with.</p>
-
-<hr />
-
-<h2 id="tweaking">4. Tweaking CSS</h2>
+<h2 id="tweaking">3. Tweaking CSS</h2>
 
 <p>The theme is build on a responsive framework, which allows content to be seen optimally on all screen sizes.</p>
 
@@ -108,7 +96,7 @@
 
 <hr />
 
-<h2 id="responsive">5. Responsive design</h2>
+<h2 id="responsive">4. Responsive design</h2>
 
 <p>The theme is build on a Twitter Bootstrap responsive framework, which allows content to be seen optimally on all screen sizes.</p>
 
@@ -120,7 +108,7 @@
 
 <hr />
 
-<h2 id="browser">6. Browser Compatibility</h2>
+<h2 id="browser">5. Browser Compatibility</h2>
 
 <p>This theme works well (-) or great (X) in the following browsers:</p>
 
