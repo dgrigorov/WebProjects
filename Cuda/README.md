@@ -18,7 +18,6 @@
 <ol class="contents">
 <li class="html"><a href="#html">HTML Structure</a></li>
 <li class="css"><a href="#css">CSS Files</a></li>
-<li class="psd"><a href="#psd">PSD Files</a></li>
 <li class="tweaking"><a href="#tweaking">Tweaking CSS</a></li>
 <li class="responsive"><a href="#responsive">Responsive Design</a></li>
 <li class="browser"><a href="#browser">Browser Compatibility</a></li>
