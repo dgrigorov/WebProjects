@@ -1,0 +1,433 @@
+/* ---------- RESET ---------- */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+input {
+  margin: 0;
+  padding: 0;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 100%;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+ul,
+ol,
+li {
+  list-style-type: none;
+}
+
+input,
+textarea {
+  outline: none;
+}
+
+strong {
+  font-weight: bold;
+}
+
+.fr {
+  float: right;
+}
+
+.fl {
+  float: left;
+}
+
+.cb {
+  clear: both;
+}
+
+a {
+  text-decoration: none;
+}
+
+p a,
+span a,
+h5 a {
+  color: #f8bd75;
+}
+
+p a:hover,
+span a:hover,
+h5 a:hover {
+  color: #f8d3a6;
+}
+
+.fancy-hr {
+  border: none;
+  height: 1px;
+  background: #e4e4e4;
+  -webkit-box-shadow: 0px 0px 7px #d7d7d7;
+  box-shadow: 0px 0px 7px #d7d7d7;
+  margin: 3em 0;
+}
+
+img {
+  max-width: 100%;
+}
+/* ---------- PARAMETRIC MIXINS ---------- */
+/* VARIABLES */
+/* ---------- GENERAL ---------- */
+body {
+  font: 14px/21px 'Lato', sans-serif;
+  background-color: #bdc3c7;
+}
+
+ul,
+ol {
+  margin-bottom: 1.5em;
+}
+
+p a,
+h5 a,
+span a{
+  color: #efb978;
+  font-weight: bold;
+  -webkit-transition: all 0.1s ease-out;
+  -moz-transition: all 0.1s ease-out;
+  -ms-transition: all 0.1s ease-out;
+  -o-transition: all 0.1s ease-out;
+  transition: all 0.1s ease-out;
+  
+}
+
+hr {
+  border: none;
+  height: 1px;
+  border-top: 1px solid #e4e4e4;
+  margin: 0;
+}
+
+h1 {
+  margin-bottom: 0.5em;
+}
+
+h2,
+h3,
+h4 {
+  color: #2b3039;
+  line-height: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+
+h2 {
+  font-size: 26px;
+}
+
+h3 {
+  font-size: 21px;  
+}
+
+h4 {
+  font-size: 16px;
+  line-height: 42px;
+  height: 42px;  
+}
+h5 {
+  font-size: 24px;
+  margin: 15px 0;
+}
+h6 {
+  color: #c9c9c9;
+  font-size: 12px;
+}
+blockquote {
+  font: italic 18px 'Lato', sans-serif;
+  color: #fff;
+  background: transparent url('../images/blockquote-pattern.png') left top repeat-y;
+  padding-left: 2em;
+  margin: 1.5em 3em;
+}
+blockquote cite {
+  display: block;
+  font-size: 12px;
+  margin-top: 21px;
+  color: #5b5b5b;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* ---------- HEADER ---------- */
+html body header.main-header div.navbar div.navbar-inner div.container {
+  background-color: #95a5a6;
+  padding: 17px 40px 17px 40px;
+}
+
+/* ---------- SECTIONS ---------- */
+html body section.header-section {
+  background-color: #95a5a6;
+  padding: 197px 50px 50px 50px;
+  text-align: center;
+  color: #fff;
+}
+
+html body section.header-section div.jumbotron h1.lead {
+  font-size: 50px;
+  line-height: 40px;
+}
+
+html body section.header-section div.jumbotron h1.lead > span {
+  font-weight: 900;
+}
+
+html body section.main-section {
+  background-color: #ecf0f1;
+  text-align: center;
+
+  padding: 80px 50px 50px 50px;
+}
+
+html body section.main-section div.works {
+  padding-top: 50px;
+}
+
+html body section.main-section div.jumbotron h2.lead {
+  color: #444;
+  font-size: 30px;
+}
+
+html body section.main-section div.jumbotron p {
+  color: #444;
+}
+
+html body section.main-section h2 {
+  color: #7f8c8d;
+}
+
+html body section.main-section a.btn-more {
+  background-color: #ecf0f1;
+  border: 2px solid #989a9a;
+  color: #34495e;
+  padding: 10px 100px;
+}
+
+html body section.main-section a.btn-more:hover {
+  border-color: #6e7c7d;
+}
+
+html body section.main-section div.clients {
+  padding: 100px 0 0 0;
+  text-align: center;
+}
+
+html body section.main-section div.clients div.offset1 a:hover {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+  opacity: .7
+}
+
+/* ---------- FOOTER ---------- */
+html body footer div.container {
+  background-color: #444;
+  padding: 40px;
+}
+
+html body footer div.container div.social-links ul li {
+  float: left;
+  padding-left: 15px;
+}
+
+html body footer div.container div.social-links ul li a img {
+  margin-right: 15px;
+}
+
+html body footer div.container div.social-links ul li a,
+html body footer div.container p.copyright {
+  color: #fff;
+}
+
+/* ---------- ABOUT PAGE ---------- */
+html body header.main-header div.navbar div.navbar-inner div.container div.nav-collapse nav.menu ul.nav-pills li.current a {
+  color: #252525;
+}
+
+html body section.main-section div.jumbotron p {
+  text-align: center;
+  color: #444;
+}
+
+/*html body div.row div.span2 a div.procces-hover {
+  display: none;
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+html body div.row div.span2 a:hover div.procces-hover {
+  display: block;
+  width: 134px;
+  height: 134px;
+  background-color: #aaa;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=65)";
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=65);
+  opacity: 0.65;
+  border-radius: 100%;
+  margin: -139px 0 0 18px;
+  padding: 50px 0 0 0;
+}*/
+
+html body section.main-section div.work-tools {
+  padding: 100px 0;
+}
+
+html body section.main-section div.jumbotron div.map-main {
+  margin-bottom: 50px;
+}
+
+html body div.contact-form {
+  background-color: #ecf0f1;
+}
+
+html body div.contact-form form textarea {
+  width: 370px;
+}
+
+html body div.contact-form form input[type="text"],
+html body div.contact-form form textarea {
+  font-size: 18px;
+  color: #bec0c0;
+  padding: 15px;
+  border: 1px solid #c6c8c9;
+}
+
+html body div.contact-form form input[type="submit"] {
+  background: #95a5a6;
+  border-radius: 5px;
+  padding: 5px 15px;
+  color: #fff;
+  font-weight: 700;
+  font-size: 11px;
+}
+
+.process {
+  padding-top: 50px;
+}
