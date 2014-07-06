@@ -1,0 +1,300 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+    <meta name="author" content="Daniel Grigorov" />
+    <meta name="description" content="Лейбъл РФИД информационна уебстраница" />
+    <meta name="keywords" content="RFID, applications, theory , products , RFID cards, chips, теория, продукти , безконтактни карти, чипове, стикери , тагове, studiocard.net" />
+    <title>Label RFID Bulgaria</title>
+
+    <!-- Favorites icon -->
+    <link rel="shortcut icon" href="http://para.llel.us/favicon.ico" />
+
+    <!-- Style sheets -->
+    <link rel="stylesheet" type="text/css" href="css/reset.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/default.css" />
+    <link rel="stylesheet" type="text/css" href="css/menu.css" />
+    <link rel="stylesheet" type="text/css" href="css/fancybox.css" />
+
+    <!-- Skin Style Sheet -->
+    <link rel="stylesheet" href="css/skins/skin-1.css" type="text/css" id="SkinCSS" />
+
+    <!-- jQuery framework and utilities -->
+    <script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+    <script type="text/javascript"> $j = jQuery.noConflict(); </script>
+    <script type="text/javascript" src="js/jquery-ui-1.7.2.min.js"></script>
+    <script type="text/javascript" src="js/jquery.easing.1.3.min.js"></script>
+    <script type="text/javascript" src="js/hoverIntent.min.js"></script>
+    <!-- Drop down menus -->
+    <script type="text/javascript" src="js/menu.js"></script>
+
+    <!-- Input labels -->
+    <script type="text/javascript" src="js/jquery.overlabel.min.js"></script>
+    <!-- Inline popups/modal windows -->
+    <script type="text/javascript" src="js/jquery.fancybox-1.3.1.pack.js"></script>
+
+    <!-- Carousel (for featured content) -->
+    <script type="text/javascript" src="js/jquery.jcarousel.min.js"></script>
+    <script type="text/javascript">
+        function mycarousel_initCallback(carousel) {
+            jQuery('#FeaturedNext').bind('click', function () { carousel.next(); return false; });
+            jQuery('#FeaturedPrev').bind('click', function () { carousel.prev(); return false; });
+        };
+        // Load product carousel...
+        jQuery(document).ready(function () {
+            jQuery("#FeaturedContent").jcarousel({
+                scroll: 3,
+                visible: 5,
+                initCallback: mycarousel_initCallback,
+                buttonNextHTML: null,
+                buttonPrevHTML: null
+            });
+        });
+    </script>
+
+    <!-- Slide shows -->
+    <!-- Cycle 	(default) -->
+    <script type="text/javascript" src="js/jquery.cycle.all.min.js"></script>
+    <script type="text/javascript">
+        // initialize slideshow (Cycle)
+        jQuery(document).ready(function ($) {
+            if ($('#Slides').length > 0) {
+                $('#Slides').cycle({
+                    fx: 'fade',
+                    speed: 750,
+                    timeout: 4000,
+                    randomizeEffects: false,
+                    easing: 'easeOutCubic',
+                    next: '.slideNext',
+                    prev: '.slidePrev',
+                    pager: '#SlidePager',
+                    before: function () {
+                        // reset the overlay for the next slide
+                        jQuery('#SlideShow').css('cursor', 'default').unbind('click');
+                    },
+                    after: function () {
+                        // get the link and apply it to the overlay
+                        var theLink = jQuery(this);
+                        var linkURL = (theLink) ? theLink.attr('href') : false;
+                        if (linkURL) {
+                            jQuery('#SlideShow').css('cursor', 'pointer').click(function () {
+                                document.location.href = linkURL;
+                            });
+                        }
+                    }
+                });
+            }
+        });
+    </script>
+
+    <script type="text/javascript">
+        document.getElementById("ProductDetailsModal").onclick = function () {
+            alert("Hello world!");
+        }
+    </script>
+
+    <!-- IE only includes (PNG Fix and other things for sucky browsers -->
+
+    <!--[if lt IE 7]>
+		<link rel="stylesheet" type="text/css" href="css/ie-6.css">
+		<script type="text/javascript" src="js/pngFix.min.js"></script>
+		<script type="text/javascript"> 
+			$j(document).ready(function(){ 
+				$j(document.body).supersleight();
+			}); 
+		</script> 
+	<![endif]-->
+    <!--[if IE]><link rel="stylesheet" type="text/css" href="css/ie-all-versions.css"><![endif]-->
+
+    <script type="text/javascript" src="js/demo.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/demo.css" />
+
+    <!-- Functions to initialize after page load -->
+    <script type="text/javascript" src="js/onLoad.js"></script>
+
+</head>
+<body>
+
+    <div id="Wrapper">
+
+        <div id="Top">
+            <div id="TopContainer">
+
+                <!-- Main Menu: MegaMenu -->
+                <div id="MainMenu">
+                    <ul id="MegaMenu">
+
+                        <li class="current">
+                            <a href="index.html">Начало</a>
+                        </li>
+                        <li>
+                            <a href="products.html">Продукти</a>
+                        </li>
+                        <li>
+                            <a href="contact.html">Контакти</a>
+                        </li>
+                    </ul>
+                    <!-- END class="MegaMenu" -->
+                </div>
+                <!-- END id="MainMenu" -->
+
+            </div>
+            <!--END id="TopContainer" ->
+	</div> <!-- END id="Top" -->
+
+            <a href="index.html" id="LogoHeader"></a>
+
+            <div id="SlideShow" class="shortSS">
+                <div id="SlideShow-Images">
+                    <div id="CyclePlugin">
+                        <div id="Slides">
+                            <img src="images/content/demo-only/banner-sap.jpg" width="974" height="375" alt="slide 2" />
+                            <img src="images/content/demo-only/banner-topten.jpg" width="974" height="375" alt="slide 3" />
+                            <img src="images/content/demo-only/banner-webprinting.jpg" width="974" height="375" alt="slide 4" />
+                            <img src="images/content/demo-only/banner-zebra.jpg" width="974" height="375" alt="slide 1" />
+                        </div>
+                    </div>
+                </div>
+                <!-- END id="SlideShow-Images" -->
+                <div id="SlideShow-Controls">
+                    <div id="SlideNextPrev">
+                        <a href="#" class="slideNext"></a>
+                        <a href="#" class="slidePrev"></a>
+                    </div>
+                    <!-- END id="SlideNextPrev" -->
+                    <div id="SlidePager"></div>
+                </div>
+                <!-- END id="SlideShow-Controls" -->
+                <div id="SlideShow-Top"></div>
+                <div id="SlideShow-Middle"></div>
+                <div id="SlideShow-Bottom"></div>
+            </div>
+            <!-- END id="SlideShow" -->
+
+            <div id="SlideShow-Shadow" class="shortSS"></div>
+
+            <div id="PageWrapper">
+
+                <div id="MainPage">
+                    <div id="MainPageContent">
+                        <div class="contentArea">
+                            <div class="two_third">
+
+                                <!-- Page Content -->
+								<br /><br />
+                                <h1>Какво е <strong>"логистичен етикет"</strong> ?</h1>
+                                <div class="hr"></div>
+
+                                <div class="imgTall">
+										<span><img src="images/content/demo-only/label2.png" width="262" height="390" alt="NiceLabel" /></span>		
+                                </div>
+
+                                <p>
+                                    Доброволен стандарт, 
+									който дефинира използването
+									на баркод символи при
+									създаването на етикет за 
+									идентифициране на логистични единици.
+                                </p>
+                                <p>
+                                    Eтикетът предоставя ясна и 
+									изчерпателна информация за 
+									логистичната единица, на която
+									е поставен, едновременно в 
+									четима от човека форма и с 
+									баркод символи. 
+                                </p>
+                                <p>
+                                    <strong>Предимства:</strong>
+                                    <ul type="circle">
+                                        <p><b>1.</b>Глобален и многоотраслов стандарт.</p>
+                                        <p><b>2.Широко употребяван</b> върху палети на стоки с кратък срок на годност.</p>
+                                        <p><b>3.</b>Чрез стандартен формат на етикета се постига <b>икономия</b> на разходи.</p>
+                                        <p><b>4.</b>Ефективно спомага за <b>насочване</b> и <b>управление</b> на движението на логистичните единици</p>
+                                        <p><b>5.</b>Връзка между физическия поток от стоки <b>(сканиран баркод)</b> и информационен поток  (EDI)</p>
+                                    </ul>
+                                </p>
+                                <p>
+                                    <button type="button" class="btn">Повече информация</button>
+								</p>
+							</div>
+
+                            </div><!--  END class="contentArea" -->
+                            <div class="one_third last">
+							<br /><br />
+                                <div class="sidebar">
+                                    <div class="sidebarBox-1">
+                                        <div class="sidebarBox-2">
+                                            <h3>Клиенти</h3><br />
+                                            <p>
+                                                <img src="images/sponsors/sponsor-1.png" width="245" height="181" alt="Clients" />
+											</p>
+
+                                            <div style="margin: 2em 0;" class="hr"></div>
+
+                                            <div id="contacts">
+                                                
+                                                <h3>Контакти</h3><br />
+                                                <p class="left">
+                                                    <span style="font-size: 1.35em;">Моб.: +359 885 10 70 19</span><br />
+                                                    <span style="font-size: 1.35em;">Офис: +359 2 483 27 27</span><br />
+                                                    <span style="font-size: 1.35em;">Сайт: <a href="http://www.rfid.bg">www.rfid.bg</a></span><br />
+                                                    <span style="font-size: 1.35em;">Имейл: <a href="#">office@rfid.bg</a></span>
+                                                </p>
+                                                    <a href="sample-contact.html" class="boxLink">Свържете се с нас</a>  
+                                            </div>
+                                            <!-- END id="contacts" -->
+                                        </div>
+                                        <!-- END class="sidebarBox-2" -->
+                                    </div>
+                                    <!-- END class="sidebarBox-1" -->
+                                </div>
+                                <!-- END class="sidebar" -->
+							</div>
+                            <!-- END class="one_third last" -->
+                            <div class="clear"></div>
+                        </div>
+                        <!-- END id="MainPageContent" -->
+                    </div>
+                    <!-- END id="MainPage" -->
+                </div>
+                <!-- END id="PageWrapper" -->
+
+
+            </div>
+            <!-- END id="Wrapper" -->
+
+            <div id="FooterWrapper">
+                <div id="Footer">
+                    <div id="FooterContent">
+
+                        <div class="contentArea">
+
+                            <div class="copyright right">
+                                Copyright &copy; 2012 - <a href="http://www.cgart.bg/show/DGrigorov">Даниел Григоров</a> - Всички права са запазени.
+                            </div>
+
+                            <ul id="FooterMenu" class="horizList left">
+                                <li><a href="index.html">Начало</a></li>
+                                <li><a href="products.html">Продукти</a></li>
+                                <li><a href="contact.html">Контакти</a></li>
+                            </ul>
+                            <!-- END id="FooterMenu" -->
+
+                            <div class="clear"></div>
+
+                        </div>
+                        <!-- END class="contentArea" -->
+
+                    </div>
+                    <!-- END id="FooterContent" -->
+                </div>
+                <!-- END id="Footer" -->
+            </div>
+            <!-- END id="FooterWrapper" -->
+
+        </div>
+        <!-- END id="Wrapper" -->
+</body>
+</html>

@@ -1,0 +1,533 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta  http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+	<meta name="author" content="Daniel Grigorov" />
+	<meta name="description" content="Informative website for logistic labels" />
+	<meta name="keywords" content="rfid, label, frequency, radio" />
+	<title>Label RFID Bulgaria</title>
+	
+	<!-- Favorites icon -->
+	<link rel="shortcut icon" href="http://para.llel.us/favicon.ico" />
+	
+	<!-- Style sheets -->
+	<link rel="stylesheet" type="text/css" href="css/reset.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/default.css" />
+	<link rel="stylesheet" type="text/css" href="css/menu.css" />
+	<link rel="stylesheet" type="text/css" href="css/fancybox.css" />
+
+	<!-- Skin Style Sheet -->
+	<link rel="stylesheet" href="css/skins/skin-1.css" type="text/css" id="SkinCSS" />
+
+	<!-- jQuery framework and utilities -->
+	<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+	<script type="text/javascript"> $j = jQuery.noConflict(); </script>
+	<script type="text/javascript" src="js/jquery-ui-1.7.2.min.js"></script>
+	<script type="text/javascript" src="js/jquery.easing.1.3.min.js"></script>
+	<script type="text/javascript" src="js/hoverIntent.min.js"></script>
+	<!-- Drop down menus -->
+	<script type="text/javascript" src="js/menu.js"></script>
+	<!-- Font replacement (cufon) -->
+	<script type="text/javascript" src="js/cufon-yui.js"></script>
+	<script type="text/javascript" src="js/Vegur.font.js"></script>
+	<script type="text/javascript" src="js/Vegur.Light.font.js"></script>
+	<!-- Input labels -->
+	<script type="text/javascript" src="js/jquery.overlabel.min.js"></script>
+	<!-- Inline popups/modal windows -->
+	<script type="text/javascript" src="js/jquery.fancybox-1.3.1.pack.js"></script>
+
+	<!-- Carousel (for featured content) -->
+		<script type="text/javascript" src="js/jquery.jcarousel.min.js"></script>
+		<script type="text/javascript">
+		function mycarousel_initCallback(carousel) {		
+			jQuery('#FeaturedNext').bind('click', function() { carousel.next(); return false; });
+			jQuery('#FeaturedPrev').bind('click', function() { carousel.prev(); return false; });
+		};
+		// Load product carousel...
+		jQuery(document).ready(function() {
+			jQuery("#FeaturedContent").jcarousel({
+				scroll: 3,
+				visible: 5,
+				initCallback: mycarousel_initCallback,
+				buttonNextHTML: null,
+				buttonPrevHTML: null
+			});
+		});
+		</script>
+
+	<!-- Slide shows -->
+		<!-- Cycle 	(default) -->
+		<script type="text/javascript" src="js/jquery.cycle.all.min.js"></script>
+		<script type="text/javascript">
+			// initialize slideshow (Cycle)
+			jQuery(document).ready(function($) {
+				if ($('#Slides').length > 0) {
+					$('#Slides').cycle({ 
+						fx: 'fade',
+						speed: 750,
+						timeout: 4000, 
+						randomizeEffects: false, 
+						easing: 'easeOutCubic',
+						next:   '.slideNext', 
+						prev:   '.slidePrev',
+						pager:  '#SlidePager',
+						before: function() {
+							// reset the overlay for the next slide
+							jQuery('#SlideShow').css('cursor','default').unbind('click'); },
+						after: function() {
+							// get the link and apply it to the overlay
+							var theLink = jQuery(this);
+							var linkURL = (theLink) ? theLink.attr('href') : false;
+							if (linkURL) {
+								jQuery('#SlideShow').css('cursor','pointer').click( function() {
+									document.location.href = linkURL;
+								});
+							}
+						}
+					});
+				}
+			});
+		</script>
+
+
+	<!-- IE only includes (PNG Fix and other things for sucky browsers -->
+	
+	<!--[if lt IE 7]>
+		<link rel="stylesheet" type="text/css" href="css/ie-6.css">
+		<script type="text/javascript" src="js/pngFix.min.js"></script>
+		<script type="text/javascript"> 
+			$j(document).ready(function(){ 
+				$j(document.body).supersleight();
+			}); 
+		</script> 
+	<![endif]-->
+	<!--[if IE]><link rel="stylesheet" type="text/css" href="css/ie-all-versions.css"><![endif]-->
+
+
+	<!-- BEGIN: For Demo Only -->
+		<!--			
+		These entries are only needed for demo features, such as the real-time skin changer.
+		They can be deleted for production installs without effecting the theme's design or 
+		any of the funcionality.
+		-->
+		<script type="text/javascript" src="js/demo.js"></script>	
+		<link rel="stylesheet" type="text/css" href="css/demo.css" />
+	<!-- END: For Demo Only -->
+
+
+	<!-- Functions to initialize after page load -->
+	<script type="text/javascript" src="js/onLoad.js"></script>
+
+</head>
+<body>
+
+<div id="Wrapper">
+
+	<div id="Top">
+		<div id="TopContainer">
+			<!-- Main Menu: MegaMenu -->
+			<div id="MainMenu">
+				<ul id="MegaMenu">
+				
+					<li class="current">
+						<a href="index.html">Начало</a>
+					</li>
+					<li>
+						<a href="products.html">Продукти</a>
+					</li>
+					<li>
+						<a href="contact.html">Контакти</a>
+					</li>	
+				</ul><!-- END class="MegaMenu" -->
+			</div> <!-- END id="MainMenu" -->
+		</div><!-- END id="TopContainer" -->
+	</div> <!-- END id="Top" -->
+	
+	<a href="index.html" id="LogoHeaderP"></a>
+	
+	<div id="PageTop"></div>
+	<div id="PageWrapper">
+		
+		<div id="PageOverlay">
+			<div id="PageOverlayContent">
+					
+					<div class="contentArea" style="position:relative; width:974px;">
+					
+						<div id="FeaturedContent" class="featuredProducts">
+							<div class="featuredItems">
+								<ul>
+									<li>
+										<a href="#ProductDetailsModal" class="zoom">
+											<img src="images/content/demo-only/software-box/box-1.png" width="160" alt="Featured Product" />
+										</a>
+										<h3 class="featuredTitle">Designer Express </h3>
+										<p>Базово етикиране за малкия бизнес.</p><br />
+										<p style="text-align: left;">
+											<a href="http://www.nicelabel.com/products/designer-express">
+												More Information &raquo;
+											</a>
+										</p>
+										<p>&nbsp;</p>
+									</li>
+									<li>
+										<a href="#ProductDetailsModal2" class="zoom">
+											<img src="images/content/demo-only/software-box/box-2.png" width="160" alt="Featured Product" />
+										</a>
+										<h3 class="featuredTitle">Designer Standard </h3>
+										<p>Максимално опростено промишлено етикиране.</p><br />
+										<p style="text-align: left;">
+											<a href="http://www.nicelabel.com/products/designer-standard">
+												More Information &raquo;
+											</a>
+										</p>
+										<p>&nbsp;</p>
+									</li>
+									<li>
+										<a href="#ProductDetailsModal3" class="zoom">
+											<img src="images/content/demo-only/software-box/box-3.png" width="160" alt="Featured Product" />
+										</a>
+										<h3 class="featuredTitle">Designer Pro </h3>
+										<p>Професионално етикиране за индустрията.</p><br />
+										<p style="text-align: left;">
+											<a href="http://www.nicelabel.com/products/designer-pro">
+												More Information &raquo;
+											</a>
+										</p>
+										<p>&nbsp;</p>
+									</li>
+									<li>
+										<a href="#ProductDetailsModal4" class="zoom">
+											<img src="images/content/demo-only/software-box/box-4.png" width="160" alt="Featured Product" />
+										</a>
+										<h3 class="featuredTitle">PowerForms Desktop</h3>
+										<p>Дизайн на етикети и разработване на апликации.</p><br />
+										<p style="text-align: left;">
+											<a href="http://www.nicelabel.com/products/powerforms-desktop">
+												More Information &raquo;
+											</a>
+										</p>
+										<p>&nbsp;</p>
+									</li>
+									<li>
+										<a href="#ProductDetailsModal5" class="zoom">
+											<img src="images/content/demo-only/software-box/box-8.png" width="160" alt="Featured Product" />
+										</a>
+										<h3 class="featuredTitle">NiceLabel Suite</h3>
+										<p>Бързо разработване на персонализирани решения за дизайн и печат на етикети, които отговарят на нуждите ви.</p><br />
+										<p style="text-align: left;">
+											<a href="http://www.nicelabel.com/Products/NiceLabel-Enterprise-Series/NiceLabel-Suite">
+												More Information &raquo;
+											</a>
+										</p>
+										<p>&nbsp;</p>
+									</li>
+									<li>
+										<a href="#ProductDetailsModal6" class="zoom">
+											<img src="images/content/demo-only/software-box/box-6.png" width="160" alt="Featured Product" />
+										</a>
+										<h3 class="featuredTitle">Business Connector</h3>
+										<p>Бързо автоматизиране на печата на етикети от вашата ERP система.</p><br />
+										<p style="text-align: left;">
+											<a href="http://www.nicelabel.com/Products/NiceLabel-Enterprise-Series/NiceWatch-Enterprise-Business-Connector">
+												More Information &raquo;
+											</a>
+										</p>
+										<p>&nbsp;</p>
+									</li>
+									</li>
+									<li>
+										<a href="#ProductDetailsModal7" class="zoom">
+											<img src="images/content/demo-only/software-box/box-7.png" width="160" alt="Featured Product" />
+										</a>
+										<h3 class="featuredTitle">Print Center</h3>
+										<p>Централизира контрола върху печатането на етикети във вашата фирма.</p><br />
+										<p style="text-align: left;">
+											<a href="http://www.nicelabel.com/Products/NiceLabel-Enterprise-Series/NiceLabel-Print-Center">
+												More Information &raquo;
+											</a>
+										</p>
+										<p>&nbsp;</p>
+									</li>
+									<li>
+										<a href="#ProductDetailsModal8" class="zoom">
+											<img src="images/content/demo-only/software-box/box-5.png" width="160" alt="Featured Product" />
+										</a>
+										<h3 class="featuredTitle">NiceWatch Enterprise </h3>
+										<p>Aвтоматизира печатането на етикети от съществуващите бизнес апликации.</p><br />
+										<p style="text-align: left;">
+											<a href="http://www.nicelabel.com/Products/NiceLabel-Enterprise-Series/NiceWatch-Enterprise-Business-Connector">
+												More Information &raquo;
+											</a>
+										</p>
+										<p>&nbsp;</p>
+									</li>
+								</ul>
+							</div>
+							<div class="featuredScroll">
+								<a href="#" id="FeaturedNext">Next</a>
+								<a href="#" id="FeaturedPrev">Previous</a>
+							</div>
+							
+						</div> <!-- END id="FeaturedContent" -->
+						<div class="clear"></div>	
+						
+						<div style="display:none;">
+							<div id="ProductDetailsModal" style="width: 525px; padding:5px 25px 0;">
+								<div class="left center">
+									<img src="images/content/demo-only/software-box/box-1.png" width="200" alt="Featured Product" />
+									<br />
+									<button class="btnDemo">
+										<a href="http://www.nicelabel.com/products/designer-express">Демо</a>
+									</button>
+								</div>
+								<div class="left" style="margin:17px 0 0 15px; width:300px;">
+									<h1 style="color:#333; border-bottom: 1px solid #ddd;">NiceLabel Designer Express</h1>
+									<p>
+										Базово етикиране за малкия бизнес.
+									</p>
+									<ul class="checkMark">
+										<li>Най-достъпното решение за печат на етикети.</li>
+										<li>Подгответе вашите етикети за минути.</li>
+										<li>Използвайте Excel за база данни.</li>
+									</ul>
+									<p style="text-align: left;"><a href="#">More Information &raquo;</a></p>
+									<p>&nbsp;</p>
+								</div>
+							</div>
+							
+							<div id="ProductDetailsModal2" style="width: 525px; padding:5px 25px 0;">
+								<div class="left center">
+									<img src="images/content/demo-only/software-box/box-2.png" width="200" alt="Featured Product" />
+									<br />
+									<button class="btnDemo">Демо</button>
+								</div>
+								<div class="left" style="margin:17px 0 0 15px; width:300px;">
+									<h1 style="color:#333; border-bottom: 1px solid #ddd;">NiceLabel Designer Standard</h1>
+									<p>
+										Максимално опростено промишлено етикиране.
+									</p>
+									<ul class="checkMark">
+										<li>Най-лесният начин да печатате от вашата база данни.</li>
+										<li>Модул за улеснен печат с един клик – за да намалите грешките.</li>
+									</ul>
+									<p style="text-align: left;"><a href="#">More Information &raquo;</a></p>
+									<p>&nbsp;</p>
+								</div>
+							</div>
+							<div id="ProductDetailsModal3" style="width: 525px; padding:5px 25px 0;">
+								<div class="left center">
+									<img src="images/content/demo-only/software-box/box-3.png" width="200" alt="Featured Product" />
+									<br />
+									<button class="btnDemo">Демо</button>
+								</div>
+								<div class="left" style="margin:17px 0 0 15px; width:300px;">
+									<h1 style="color:#333; border-bottom: 1px solid #ddd;">NiceLabel Designer Pro</h1>
+									<p>
+										Професионално етикиране за индустрията.
+									</p>
+									<ul class="checkMark">
+										<li>Най-мощния инструмент за дизайн.</li>
+										<li>Печатайте сложни етикети (като GS1), използвайки вградените библиотеки.</li>
+										<li>Пълен контрол и проследимост на печата.</li>
+									</ul>
+									<p style="text-align: left;"><a href="#">More Information &raquo;</a></p>
+									<p>&nbsp;</p>
+								</div>
+							</div>
+							<div id="ProductDetailsModal4" style="width: 525px; padding:5px 25px 0;">
+								<div class="left center">
+									<img src="images/content/demo-only/software-box/box-4.png" width="200" alt="Featured Product" />
+									<br />
+									<button class="btnDemo">Демо</button>
+								</div>
+								<div class="left" style="margin:17px 0 0 15px; width:300px;">
+									<h1 style="color:#333; border-bottom: 1px solid #ddd;">NiceLabel PowerForms Desktop</h1>
+									<p>
+										Дизайн на етикети и разработване на апликации.
+									</p>
+									<ul class="checkMark">
+										<li>Станете дизайнер на вашия софтуер за печат на етикети. Без да програмирате....</li>
+										<li>Интегрирайте се с вашата система за производство без усилия.</li>
+									</ul>
+									<p style="text-align: left;"><a href="#">More Information &raquo;</a></p>
+									<p>&nbsp;</p>
+								</div>
+							</div>
+							<div id="ProductDetailsModal5" style="width: 525px; padding:5px 25px 0;">
+								<div class="left center">
+									<img src="images/content/demo-only/software-box/box-8.png" width="200" alt="Featured Product" />
+									<br />
+									<button class="btnDemo">Демо</button>
+								</div>
+								<div class="left" style="margin:17px 0 0 15px; width:300px;">
+									<h1 style="color:#333; border-bottom: 1px solid #ddd;">NiceLabel Suite</h1>
+									<p>
+										Бързо разработване на персонализирани решения за дизайн и печат на етикети,
+										които отговарят на нуждите ви.
+									</p>
+									<ul class="checkMark">
+										<li>Мощно модулно решение за интеграция и автоматизиране на печата на етикети.</li>
+										<li>Интеграция с производствени системи и бази данни.</li>
+									</ul>
+									<p style="text-align: left;"><a href="#">More Information &raquo;</a></p>
+									<p>&nbsp;</p>
+								</div>
+							</div>
+							<div id="ProductDetailsModal6" style="width: 525px; padding:5px 25px 0;">
+								<div class="left center">
+									<img src="images/content/demo-only/software-box/box-6.png" width="200" alt="Featured Product" />
+									<br />
+									<button class="btnDemo">Демо</button>
+								</div>
+								<div class="left" style="margin:17px 0 0 15px; width:300px;">
+									<h1 style="color:#333; border-bottom: 1px solid #ddd;">NiceWatch Enterprise Business Connector</h1>
+									<p>
+										Бързо автоматизиране на печата на етикети от вашата ERP система.
+									</p>
+									<ul class="checkMark">
+										<li>Сертифицирано решение за директен печат от ERP системи.</li>
+										<li>Централизиран контрол и управление на печата.</li>
+									</ul>
+									<p style="text-align: left;"><a href="#">More Information &raquo;</a></p>
+									<p>&nbsp;</p>
+								</div>
+							</div>
+							<div id="ProductDetailsModal7" style="width: 525px; padding:5px 25px 0;">
+								<div class="left center">
+									<img src="images/content/demo-only/software-box/box-7.png" width="200" alt="Featured Product" />
+									<br />
+									<button class="btnDemo">Демо</button>
+								</div>
+								<div class="left" style="margin:17px 0 0 15px; width:300px;">
+									<h1 style="color:#333; border-bottom: 1px solid #ddd;">NiceLabel Print Center</h1>
+									<p>
+										Централизира контрола върху печатането на етикети във вашата фирма.
+									</p>
+									<ul class="checkMark">
+										<li>Централизиран контрол върху печата на етикети.</li>
+										<li>Отдалечено управление и контрол на принтерите.</li>
+									</ul>
+									<p style="text-align: left;"><a href="#">More Information &raquo;</a></p>
+									<p>&nbsp;</p>
+								</div>
+							</div>
+							<div id="ProductDetailsModal8" style="width: 525px; padding:5px 25px 0;">
+								<div class="left center">
+									<img src="images/content/demo-only/software-box/box-5.png" width="200" alt="Featured Product" />
+									<br />
+									<button class="btnDemo">Демо</button>
+								</div>
+								<div class="left" style="margin:17px 0 0 15px; width:300px;">
+									<h1 style="color:#333; border-bottom: 1px solid #ddd;">NiceWatch Enterprise</h1>
+									<p>
+										Aвтоматизира печатането на етикети от съществуващите бизнес апликации.
+									</p>
+									<ul class="checkMark">
+										<li>Автоматичен печат от вашата система.</li>
+										<li>Инсталация на сървър.</li>
+										<li>Управление на много принтери, независимо от тяхното разположение.</li>
+									</ul>
+									<p style="text-align: left;"><a href="#">More Information &raquo;</a></p>
+									<p>&nbsp;</p>
+								</div>
+							</div>
+						</div>				
+					
+					</div>
+
+			</div> <!-- END id="PageOverlayContent" -->
+		</div> <!-- END id="PageOveraly" -->
+
+		<div id="MainPage">
+			<div id="MainPageContent">
+				<div class="contentArea">
+					<div class="two_third_info">
+					
+						<!-- Page Content -->
+						<br /><br />
+						<h2 class="title">NiceLabel</h2>
+						<div class="hr"></div>
+						<p>
+							Една от множеството процедури, която българските производители и търговци трябва да изпълнят, 
+							е изискването за проследимост на храни и хранителни продукти, по силата на Европейска Директива
+							от 2002 г. <br />Макар в момента изискването да се отнася  само  до  хранително-вкусовата промишленост,
+							предвижда се скоро то да обхване още фармация, химическа промишленост и други.
+						</p>
+						<p>
+							От  гледна  точка  на  управлението на информацията, системата за проследяване във веригата за доставки
+							изисква всички участници систематично да регистрират и съхраняват в стандартизиран вид връзките между 
+							потока от суровини, междинни продукти и готови продукти. Това е постижимо чрез използването на 
+							унифицирано кодиране на база на системата стандарти EAN*UCC. <strong>Логистичният етикет GS1</strong>
+							е международно признат стандарт за етикет, който се използва за идентифициране на логистични единици (кашони, 
+							палети, каси,  контейнери и др.). В етикета информацията се представя във вид на баркодове за 
+							автоматично прочитане.     
+						</p>
+						<p>
+							NiceLabel е фамилия софтуерни продукти за печат и кодиране на баркод и RFID етикети. Това е софтуерът
+							, който значително ще облекчи работата на производителите при изпълнението на изискванията за 
+							проследимост на всяка единица.
+						</p>
+						<p>
+							NiceLabel е изграден е на модулен принцип и това му позволява да бъде лесен и удобен за използване, 
+							въпреки богатия си набор от функции. NiceLabel е едно от най-добрите решения в тази област, оценено 
+							от експертите на специализираните сайтове и списания.
+						</p>
+						<p>С него ще получите:</p>
+						<ul class="bullet-disc-silver">
+							<li>Бързo и леснo генериране на GS-128 етикети;</li>
+							<li>Светкавично оформяне на шаблони за печат;</li>
+							<li>Централизиран мениджмънт за печат.</li>
+							<li>Максимално улеснени процедури за вашите служители.</li>
+							<li>Връзка със съществуващи бази данни.</li>
+						</ul>
+						<p>
+							<strong>NiceLabel</strong> предлага 4 различни пакета в зависимост от 
+							функционалността и техническите спецификации:
+						</p>
+						<ul class="bullet-disc-silver">
+							<li>PowerForms Desktop</li>
+							<li>Designer Pro</li>
+							<li>Designer Standard</li>
+							<li>Designer Express</li>
+						</ul>
+						<p><button type="button" class="btnDemo" onclick="document.location.href='http://www.nicelabel.com/products';">Виж повече</button></p>
+					</div>
+					<div class="clear"></div>
+				</div> <!-- END class="contentArea" -->
+			</div> <!-- END id="MainPageContent" -->
+		</div> <!-- END id="MainPage" -->
+		
+		
+	</div> <!-- END id="PageWrapper" -->
+
+	<div id="FooterWrapperCont">
+		<div id="Footer">
+			<div id="FooterContent">
+				
+				<div class="contentArea">
+					
+					<div class="copyright right">
+						Copyright &copy; 2012 - <a href="http://www.cgart.bg/show/DGrigorov">Даниел Григоров</a> - Всички права са запазени.
+					</div>
+					
+					<ul id="FooterMenu" class="horizList left">
+						<li><a href="index.html">Начало</a></li>
+						<li><a href="products.html">Продукти</a></li>
+						<li><a href="contact.html">Контакти</a></li>
+					</ul> <!-- END id="FooterMenu" -->
+					
+					<div class="clear"></div>
+					
+				</div> <!-- END class="contentArea" -->
+				
+			</div> <!-- END id="FooterContent" -->
+		</div> <!-- END id="Footer" -->
+	</div> <!-- END id="FooterWrapper" -->
+	
+</div> <!-- END id="Wrapper" -->
+
+<!-- Activate Font Replacement (cufon) -->
+<script type="text/javascript"> Cufon.now(); </script>
+</body>
+</html>
