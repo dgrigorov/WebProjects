@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/Organization">
+<head>
+    <meta charset="utf-8">
+    <title>Modus Versus</title>
+    <meta name="description" content="Design&Code is a simple, minimal and clean that can be used for inumerous applications.">
+    <meta name="author" content="Daniel Grigorov">
+    <meta name="keywords" content="design, code, flat design, flat, gree, orange, gray, html5, css, css3, multi purpose, free website, free template, free, free portoflio responsive template">
+
+     <!-- Mobile Specific Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+     <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
+    <link rel="stylesheet" href="css/bootstrap-responsive.css" type="text/css" />
+    <link rel="stylesheet" href="css/styles.css" type="text/css" />
+    <link rel="stylesheet" href="css/font-awesome.css" type="text/css" />
+    <link rel="stylesheet" href="css/nivo-slider.css" type="text/css" />
+    <link rel="stylesheet" href="themes/default/default.css" type="text/css" />
+    <link rel="stylesheet" href="css/jquery.bxslider.css" type="text/css" />
+
+     <!-- Scripts -->
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="js/jquery.nivo.slider.pack.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/tooltip.js"></script>
+    <script type="text/javascript" src="js/jquery.nivo.slider.js"></script>
+    <script type="text/javascript" src="js/jquery.bxslider.min.js"></script>
+
+     <!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+    <script type="text/javascript">
+        $(window).load(function() {
+            $('#slider').nivoSlider();
+        });
+    </script>
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+          $('.slider1').bxSlider({
+            slideWidth: 200,
+            minSlides: 2,
+            maxSlides: 6,
+            slideMargin: 10
+          });
+        });
+    </script>
+
+    <script type="text/javascript">
+        $(function () {
+            $("[rel='tooltip']").tooltip();
+        });
+    </script>
+
+</head>
+<body>
+
+     <!-- Primary Page Layout
+	================================================== -->
+
+        <div class="navbar navbar-inverse navbar-fixed-top">
+
+            <div class="navbar-inner">
+
+                <div class="container">
+
+                    <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                    <h1 class="logo"><a href="index.html" class="brand">
+                        Modus <span>versus</span></a></h1>
+
+                    <div class="nav-collapse collapse">
+
+                            <ul class="nav nav-pills pull-right">
+                                <li class="active"><a href="index.html">Home</a></li>
+                                <li><a href="about.html">About</a></li>
+                                <li><a href="services.html">Services</a></li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Portfolio <b class="caret"></b></a>
+                                    <ul class="dropdown-menu">
+
+                                        <li><a href="portfolio-one-col.html"><i class="icon-angle-right"></i> Portfolio 1 column page</a></li>
+                                        <li><a href="portfolio-two-col.html"><i class="icon-angle-right"></i> Portfolio 2 columns page</a></li>
+                                        <li><a href="portfolio-three-col.html"><i class="icon-angle-right"></i> Portfolio 3 columns page</a></li>
+                                        <li><a href="portfolio-four-col.html"><i class="icon-angle-right"></i> Portfolio 4 columns page</a></li>
+                                        <li><a href="portfolio-single.html"><i class="icon-angle-right"></i> Portfolio Single Project</a></li>
+
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Blog <b class="caret"></b></a>
+                                    <ul class="dropdown-menu">
+
+                                        <li><a href="blog-listing.html"><i class="icon-angle-right"></i> Blog Listing</a></li>
+                                        <li><a href="blog-single.html"><i class="icon-angle-right"></i> Blog Single</a></li>
+
+                                    </ul>
+                                </li>
+                                <li><a href="#">Features</a></li>
+                                <li><a href="contacts.html">Contacts</a></li>
+                                <li><a href="#"><i class="icon-search"></i></a></li>
+                            </ul>
+
+                    </div> <!--end nav-collapse -->
+
+                </div> <!-- container -->
+
+            </div> <!-- end navbar-inner -->
+
+        </div> <!-- end navbar navbar-inverse navbar-fixed-top -->
+
+        <div class="slider-wrapper theme-default">
+
+            <div id="slider" class="nivoSlider">
+
+                <img src="img/slider/slider1.jpg" alt="" />
+                <img src="img/slider/slider2.jpg" alt="" title="" />
+                <img src="img/slider/slider3.jpg" alt="" title="" />
+                <img src="img/slider/slider4.jpg" alt="" />
+
+            </div> <!-- end nivoSlider -->
+
+        </div> <!-- end slider-wrapper -->
+
+        <div class="container">
+
+            <div class="span11 top-serv-wrap">
+
+                <h2>Some of our top services</h2>
+                <a href="#myModal" role="button" data-toggle="modal" class="more-btn btn pull-right">View More</a>
+
+                <!-- Modal -->
+                <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+
+                    <div class="modal-header">
+
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <h3 id="myModalLabel">Our Servides</i></h3>
+
+                    </div>
+
+                    <div class="modal-body">
+
+                        <div class="span2">
+
+                            <i class="icon-desktop"></i>
+                            <h4>Responsive</h4>
+                            <p>Innovative design aways develops in tandem with innovative technology, and can never be and in itself. Lorem ipsum dolor</p>
+                            <a href="#" class="md-bd-btn">read more</a>
+
+                        </div> <!-- end span2 -->
+
+                        <div class="span2">
+
+                            <i class="icon-globe"></i>
+                            <h4>Lot of Features</h4>
+                            <p>Innovative design aways develops in tandem with innovative technology, and can never be and in itself. Lorem ipsum dolor</p>
+                            <a href="#" class="md-bd-btn">read more</a>
+
+                        </div> <!-- end span2 -->
+
+                        <div class="span2">
+
+                            <i class="icon-mobile-phone"></i>
+                            <h4>Retina Ready</h4>
+                            <p>Innovative design aways develops in tandem with innovative technology, and can never be and in itself. Lorem ipsum dolor</p>
+                            <a href="#" class="md-bd-btn">read more</a>
+
+                        </div> <!-- end span2 -->
+
+                    </div>
+
+                    <div class="alert">
+
+                        <button class="close" type="button" data-dismiss="alert">&times;</button>
+                        <strong>Warning!</strong> This is demo warning message from Boostrap "Alerts" section.
+
+                    </div>
+
+                    <div class="alert alert-success">
+
+                        <button class="close" type="button" data-dismiss="alert">&times;</button>
+                        <strong>Well done!</strong> You successfully read this important alert message from Bootstrap Modal Demo.
+
+                    </div>
+
+                </div>
+
+                <p>Ut eleifend libero sed neque rhoncus consequat. Maecenas tincidunt, augue et rutrum condimentum, libero lectus mattis orci, ut commodo. </p>
+                
+            </div> <!-- end top-serv-wrap -->
+
+        </div>
+
+        <div class="row-fluid">
+
+            <div class="serv-wrap container">
+
+                <div class="span4 s1">
+
+                    <i class="icon-thumbs-up"></i>
+                    <h4>SUSPENDISSE</h4>
+                    <p>Quisque id tellus quis risus vehicula vehicula ut turpis. In eros nulla, placerat vitae at, vehicula ut nunc.</p>
+                    <a href="#" class="rdmr-btn">read more</a>
+
+                </div> <!-- end span4 -->
+
+                <div class="span4 s1">
+
+                    <i class="icon-key"></i>
+                    <h4>MAECENAS </h4>
+                    <p>Ut eleifend libero sed neque rhoncus consequat. Maecenas tincidunt, augue et rutrum condimentum, libero lectus mattis orci, ut commodo.</p>
+                    <a href="#" class="rdmr-btn">read more</a>
+
+                </div> <!-- end span4 -->
+
+                <div class="span4 s1">
+
+                    <i class="icon-flag"></i>
+                    <h4>ALIQUAM </h4>
+                    <p>Vivamus eget ante bibendum arcu vehicula ultricies. Integer venenatis mattis nisl, vitae pulvinar dui tempor non.</p>
+                    <a href="#" class="rdmr-btn">read more</a>
+
+                </div> <!-- end span4 -->
+
+                <div class="span4 s1">
+
+                    <i class="icon-beaker"></i>
+                    <h4>HABITASSE</h4>
+                    <p>Astehicula ultricies. Integer venenatis mattis nisl, vitae pulvinar dui tempor non.</p>
+                    <a href="#" class="rdmr-btn">read more</a>
+
+                </div> <!-- end span4 -->
+
+            </div> <!-- end serv-wrap -->
+
+        </div> <!-- end row-fluid -->
+
+        <div class="why-modus">
+
+            <div class="container">
+
+                <h1>WHY MODUS VERSUS?</h1>
+                <p>Capacitance cascading integer reflective interface data development high bus cache dithering transponder.  </p>
+                <img src="img/browsers.png" alt="">
+
+            </div> <!-- end container -->
+
+        </div> <!-- end why-modus -->
+
+        <div class="sub-content">
+
+            <div class="container">
+
+                <div class="span3">
+
+                    <h5>Why Choose Us ?</h5>
+                    <ul>
+                        <li>Quisque at massa ipsum </li>
+                        <li>Maecenas a lorem augue, egestas </li>
+                        <li>Cras vitae felis at lacus eleifend </li>
+                        <li>Etiam auctor diam pellentesque </li>
+                        <li>Nulla ac massa at dolor </li>
+                        <li>Condimentum eleifend vitae vitae </li>
+                    </ul>
+
+                </div> <!-- end span3 -->
+
+                <div class="span6 mv-skls">
+
+                    <p>Curabitur quis nisl in leo euismod venenatis eu in diam. Etiam auctor diam pellentesque lectus <a href="#">vehicula mattis</a>. Nulla ac massa at dolor condimentum eleifend vitae vitae urna.</p>
+
+                    <div class="f-skl">
+
+                        <div class="span2">
+
+                            <img src="img/50-percents.png" alt="50 percents">
+                            <span class="percents">50</span>
+                            <h5 class="offset">SUSPENDISSE</h5>
+
+                        </div> <!-- end span2 -->
+
+                        <div class="span2"> <!-- end span2 -->
+
+                            <img src="img/70-percents.png" alt="50 percents">
+                            <span class="percents">70</span>
+                            <h5 class="offset">MAECENAS</h5>
+                            
+                        </div>
+
+                        <div class="span2"> <!-- end span2 -->
+
+                            <img src="img/70-percents.png" alt="50 percents">
+                            <span class="percents">80</span>
+                            <h5 class="offset">ALIQUAM</h5>
+                            
+                        </div> <!-- end span2 -->
+
+                        <div class="span2">
+
+                            <img src="img/100-percents.png" alt="50 percents">
+                            <span class="percents">100</span>
+                            <h5 class="offset">HABITASSE</h5>
+                            
+                        </div> <!-- end span2 -->
+
+                    </div> <!-- end f-skl -->
+
+                </div> <!-- end mv-skls -->
+
+                <div class="testm pull-right">
+
+                    <h5>What Client’s Say ?</h5>
+
+                    <div class="span3 testimonials">
+
+                        <p>Curabitur quis nisl in leo euismod venenatis eu in diam. Etiam auctor diam pellentesque lectus vehicula mattis. Nulla ac massa at dolor condimentum.</p>
+                        <div class="arrow-down"></div>
+
+                    </div> <!-- end testimonials -->
+ 
+                    <span class="tesm-auth">D.Grigorov 
+                        <a href="http://facebook.com/grigorov.daniel" target="_blank"><i class="icon-facebook"></i></a> 
+                        <a href="http://github.com/dgrigorov" target="_blank"><i class="icon-github"></i></a> 
+                        <a href="http://linkedin.com/in/dgrigorov" target="_blank"><i class="icon-linkedin"></i></a>
+                    </span>
+
+                </div> <!-- end quote -->
+
+            </div> <!-- end container -->
+
+        </div> <!-- end sub-content -->
+
+        <div class="client-slider container">
+
+            <h5>Our Happy Clients</h5>
+            <span class="breakline offset13"></span>
+
+            <div class="slider1">
+
+                <div class="slide"><a href="#"><img src="img/jquery-client.png" alt="client1"></a></div>
+                <div class="slide"><a href="#"><img src="img/jquery-client.png" alt="client2"></a></div>
+                <div class="slide"><a href="#"><img src="img/jquery-client.png" alt="client3"></a></div>
+                <div class="slide"><a href="#"><img src="img/jquery-client.png" alt="client4"></a></div>
+                <div class="slide"><a href="#"><img src="img/jquery-client.png" alt="client5"></a></div>
+                <div class="slide"><a href="#"><img src="img/jquery-client.png" alt="client6"></a></div>
+                <div class="slide"><a href="#"><img src="img/jquery-client.png" alt="client7"></a></div>
+                <div class="slide"><a href="#"><img src="img/jquery-client.png" alt="client8"></a></div>
+                <div class="slide"><a href="#"><img src="img/jquery-client.png" alt="client9"></a></div>
+
+            </div> <!-- end slider1 -->
+
+        </div>
+
+        <div class="pre-footer">
+
+            <div class="container">
+
+                <div class="about-mod span4">
+
+                    <h1 class="logo ft-lg">Modus <span>versus</span></h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae. Sed dui lorem, adipiscing in adipiscing et, interdum nec .
+                    </p>
+                    <p data-role="tel">Phone: <span class="foot-tel">182 2569 5896</span></p>
+                    <p data-role="email">e-mail: <span class="foot-mail">info@modu.versus</span></p>
+
+                </div> <!-- end about-mod -->
+
+                <div class="pre-footer-links">
+                    
+                    <div class="company span2">
+
+                        <h5 class="foot-title">Company</h5>
+                        <ul>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Contact</a></li>
+                            <li><a href="#">Terms</a></li>
+                            <li><a href="#">Privacy</a></li>
+                            <li><a href="#">Testimonials</a></li>
+                        </ul>
+
+                    </div> <!-- end company -->
+
+                    <div class="community span2">
+
+                        <h5 class="foot-title">Community</h5>
+                        <ul>
+                            <li><a href="blog-listing.html">Blog</a></li>
+                            <li><a href="#">Forum</a></li>
+                            <li><a href="#">Support</a></li>
+                            <li><a href="#">Newsletter</a></li>
+                        </ul>
+                        
+                    </div> <!-- end community -->
+
+                </div> <!-- end pre-footer-links -->
+
+                <div class="blog-posts span5">
+
+                    <h5 class="foot-title"><span class="foot-title">from the</span> Blog</h5>
+
+                    <ul class="post-list">
+
+                        <li>
+
+                            <div class="row-fluid">
+
+                                <div class="span13">
+
+                                    <a href=""><img src="img/post-image.png" alt="Post Image"></a>
+
+                                </div>
+
+                                <div class="span8">
+
+                                    <a href="#" rel="tooltip" title="Read more" class="post-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a>
+
+                                    <p class="info-date">26 May, 2013</p>
+
+                                </div>
+                        
+                            </div> <!-- end row-fluid -->
+
+                        </li>
+
+                        <li>
+
+                            <div class="row-fluid">
+
+                                <div class="span13">
+
+                                    <a href="#"><img src="img/post-image.png" alt="Post Image"></a>
+
+                                </div>
+
+                                <div class="span8">
+
+                                    <a href="#" rel="tooltip" title="Read more" class="post-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a>
+                                    <p class="info-date">26 May, 2013</p>
+
+                                </div>
+                        
+                            </div> <!-- end row-fluid -->
+
+                        </li>
+
+                    </ul> <!-- end post-list -->
+
+                </div> <!-- end blog-post -->
+
+            </div> <!-- end container -->
+
+        </div> <!-- end pre-footer-->
+
+        <footer>
+            
+            <div class="container">
+
+                <span class="copywrite">© 2013 ModusVersus - Build with Passion by <a href="http://grigorovtuts.wodpress.com" target="_blank" rel="tooltip" title="Web Designer">Daniel Grigorov</a></span>
+
+                <div class="span3 social-links">
+
+                    <ul class="social-links">
+                        <li><a href="http://facebook.com/grigorov.daniel" target="_blank" rel="tooltip" title="Follow me on Facebook"><i class="icon-facebook"></i></a></li>
+                        <li><a href="http://github.com/dgrigorov" target="_blank" rel="tooltip" title="Follow me on GitHub"><i class="icon-github"></i></a></li>
+                        <li><a href="http://twitter.com/d_grigorov" target="_blank" rel="tooltip" title="Follow me on Twitter"><i class="icon-twitter"></i></a></li>
+                        <li><a href="http://linkedin.com/in/dgrigorov" target="_blank" rel="tooltip" title="Follow me on LinkedIn"><i class="icon-linkedin"></i></a></li>
+                        <li><a href="#" target="_blank" rel="tooltip" title="Follow me on RSS"><i class="icon-rss"></i></a></li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+            </footer>    
+
+     <!-- End Document
+	================================================== -->
+</body>
+</html>
