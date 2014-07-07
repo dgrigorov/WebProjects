@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Начало</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <!-- Stylesheets -->
+        <link rel="stylesheet" href="css/normalize.css" type="text/css">
+        <link rel="stylesheet" href="css/main.css" type="text/css">
+        <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+        <link rel="stylesheet" href="css/font-awesome.css" type="text/css">
+        <link rel="stylesheet" href="css/jquery.bxslider.css" type="text/css">
+
+        <!-- Javascripts -->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="js/vendor/modernizr-2.6.2.min.js" type="text/javascript"></script>
+
+        <script>
+        $(document).ready(function(){
+          $('#last-mtrl').bxSlider({
+            slideWidth: 200,
+            minSlides: 2,
+            maxSlides: 6,
+            slideMargin: 10
+          });
+        });
+
+        $(document).ready(function() {
+            $('.tweets').bxSlider({
+              nextSelector: '#slider-next',
+              prevSelector: '#slider-prev',
+            });
+        });
+        </script>
+
+    </head>
+    <body>
+        <div class="top-bar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-5"></div>
+                    <ul class="socials col-md-3">
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-rss"></i></a></li>
+                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                        <li><a href="#"><i class="fa fa-flickr"></i></a></li>
+                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                    </ul>
+                    <div class="col-md-5"></div>
+                </div>
+                <!-- end .row -->
+            </div>
+            <!-- end .container -->
+        </div>
+        <!-- end .top-bar -->
+
+        <div class="navbar navbar-inverse container" role="navigation">
+            <div class="col-md-3">
+                <h1>
+                    <a href="index.html"><img src="img/logo.png" alt="CStudent Logo"></a>
+                </h1>
+            </div>
+            <div class="main-menu col-md-9">
+                <ul class="nav nav-pills">
+                    <div id="sb-search" class="sb-search">
+                        <form>
+                            <input class="sb-search-input" placeholder="Enter your search term..." type="search" value="" name="search" id="search">
+                            <input class="sb-search-submit" type="submit" value="">
+                            <span class="sb-icon-search"></span>
+                        </form>
+                    </div>
+                    <li><a href="index.html">Начало</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Материали <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                          <li><a href="materials.html">Материали - в1</a></li>
+                          <li><a href="materials2.html">Материали - в2</a></li>
+                          <li><a href="materials3.html">Материали - в3</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="universities.html">Унинверситети</a></li>
+                    <li><a href="quizes.html">Тестове</a></li>
+                    <li><a href="contacts.html">Контакти</a></li>
+                </ul>
+                <!-- end .nav.nav-pills -->
+            </div> 
+            <!-- end .navbar-header -->
+        </div>
+        <!-- end .navbar -->
+
+        <div class="banner">
+            <div class="container">
+                <h1 class="col-md-4">До <span class="banner-span">Матурата</span> остават точно:</h1>
+                <div class="col-md-8">
+                    <div class="chalkboard">
+                        <div class="timer">
+                            <div class="days-wrapper">
+                                <span class="days"></span> <br>DHU
+                            </div>
+                            <div class="hours-wrapper">
+                                <span class="hours"></span> <br>4ACOBE
+                            </div>
+                            <div class="minutes-wrapper">
+                                <span class="minutes"></span> <br>MUHYTU
+                            </div>
+                            <div class="seconds-wrapper">
+                                <span class="seconds"></span> <br>CEKYHDU
+                            </div>
+                        </div>
+                        <!-- end .timer -->
+                    </div>
+                    <!-- end .chalkboard -->
+                </div>
+                <!-- end .col-md-7 -->
+            </div>
+            <!-- end .container -->
+        </div>
+        <!-- end .banner -->
+    
+        <div class="form-filter">
+            <div class="container">
+                <ul id="work-uni" class="nav nav-tabs">
+                    <li class="active"><a href="#work" data-toggle="tab">Произведение</a></li>
+                    <li class=""><a href="#university" data-toggle="tab">Университет</a></li>
+                </ul>
+                <div id="myTabContent" class="tab-content">
+                    <div class="tab-pane fade active in" id="work">
+                        <form action="" name="work" method="GET" class="form-inline" role="form">
+                            
+                            <div class="author col-xs-3">
+                                <select class="form-control">
+                                    <option>Изберете автор</option>
+                                    <option>Алеко Константинов</option>
+                                    <option>Христо Ботев</option>
+                                    <option>Иван Вазов</option>
+                                    <option>Елин Пелин</option>
+                                </select>
+                            </div>
+
+                            <div class="genre col-xs-3">
+                                <select class="form-control">
+                                    <option>Изберете жанр</option>
+                                    <option>Поема</option>
+                                    <option>Разказ</option>
+                                    <option>Роман</option>
+                                    <option>Стихотворение</option>
+                                </select>
+                            </div>
+
+                            <div class="audio col-xs-3">
+                                <select class="form-control">
+                                    <option>Аудио файл</option>
+                                    <option>Да</option>
+                                    <option>Не</option>
+                                </select>
+                            </div>
+
+                            <div class="search col-xs-1">
+                                <input type="submit" value="">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="tab-pane fade in" id="university">
+                      <form action="" name="work" method="GET" class="form-inline" role="form">
+
+                            <div class="author col-xs-3">
+                                <select class="form-control">
+                                    <option>Изберете университет</option>
+                                    <option>Нов Български Университет (НБУ)</option>
+                                    <option>Университет за Национално и Световно Стопанство (УНСС)</option>
+                                    <option>Софийски Университет "Св.Климент Охридски" (СУ)</option>
+                                    <option>Технически Университет София (ТУ-София)</option>
+                                </select>
+                            </div>
+
+                            <div class="genre col-xs-3">
+                                <select class="form-control">
+                                    <option>Изберете ДЗИ</option>
+                                    <option>Английски език</option>
+                                    <option>Български език</option>
+                                    <option>Литература</option>
+                                    <option>Математика</option>
+                                </select>
+                            </div>
+
+                            <div class="audio col-xs-3">
+                                <select class="form-control">
+                                    <option>Изберете специалност</option>
+                                    <option>Актьорство за драматичен театър</option>
+                                    <option>Английска филология</option>
+                                    <option>Английски език и немски език</option>
+                                    <option>Археология</option>
+                                    <option>Балканистика</option>
+                                    <option>Бизнес информационни технологии</option>
+                                    <option>Биоинформатика</option>
+                                </select>
+                            </div>
+
+                            <div class="search col-xs-1">
+                                <input type="submit" value="">
+                            </div>
+                        </form>
+                        <!-- end .form-inline -->
+                    </div>
+                    <!-- end #university -->
+                </div>
+                <!-- end #myTabContent -->
+            </div>
+            <!-- end .container -->
+        </div>
+        <!-- end .form-filter -->
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="services container">
+                    
+                    <div class="col-xs-6 col-sm-3 check">
+                        <i class="fa fa-check-square-o"></i>
+                        <h2>Оценяване</h2>
+                        <p>Тук ще можеш да откриеш всички начини на оценяване на матурата и различни критерии за оценяване на: интерпретативно съчинение, съчинение разсъждение и литературно есе.</p>
+                    </div>
+
+                    <div class="col-xs-6 col-sm-3 sound">
+                        <i class="fa fa-volume-up"></i>
+                        <h2>Аудио</h2>
+                        <p>Тук ще можеш да откриеш всички произведения по литература от 11-ти и 12-ти клас във вид на аудио файл. Така вие ще можете да слушате произведенията дори, когато пътувате в градския транспорт.</p>
+                    </div>
+                    
+                    <div class="col-xs-6 col-sm-3 exams">
+                        <i class="fa fa-tasks"></i>
+                        <h2>Тестове</h2>
+                        <p>Тук ще можеш да откриеш различни тестове, с които ще можеш да упражниш своите знания. Въпросите ще бъдат събрани от предишни матури.</p>
+                    </div>
+                </div>
+                <!-- end .service.container -->
+            </div>
+            <!-- end .row -->
+        </div>
+        <!-- end .container-fluid -->
+
+        <div class="statistics">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="container">
+                        <div class="col-xs-6 col-sm-3">
+                            <h1 class="number">14</h1>
+                            <h3 class="description">Автори</h3>
+                        </div>
+                        <div class="col-xs-6 col-sm-3">
+                            <h1 class="number">100</h1>
+                            <h3 class="description">Произведения</h3>
+                        </div>
+                        <div class="col-xs-6 col-sm-3">
+                            <h1 class="number">58</h1>
+                            <h3 class="description">Аудио файлове</h3>
+                        </div>
+                        <div class="col-xs-6 col-sm-3">
+                            <h1 class="number">16</h1>
+                            <h3 class="description">Тестове</h3>
+                        </div>
+                    </div>
+                    <!-- end .container -->
+                </div>
+                <!-- end .row -->
+            </div>
+            <!-- end .container-fluid -->
+        </div>
+        <!-- end .statistics -->
+
+        <div class="row">
+            <div class="container last-mtrl">
+                <h1>Последни материали</h1>
+                <hr>
+                <div id="last-mtrl">
+                    <div class="slide slide-poem">
+                        <a href="#">
+                            <p class="poem">Oтвънка беше шум и светеха реклами. В афиша пишеше: "Една човешка драма. Отвънка беше шум и конника на Крум се потеше от стискане в дланта ми. И стана тъмно. В белия квадрат...</p>
+                            <p class="pull-right peom-author">"Кино" - Никола Вапцаров</p>
+                        </a>
+                    </div>
+                    <div class="slide slide-poem">
+                        <a href="#">
+                            <p class="poem" class="poem">Oстаряват хора и дървета; падат дни, нощи, листа и дъжд; неизменен в есента и летото, камък, ти стоиш все същ!Нямаш нито жили, нито нерви, нямаш нашата злочеста плът. Съвестта и...</p>
+                            <p class="pull-right peom-author">"Камък" - Атанас Далчев</p>
+                        </a>
+                    </div>
+                    <div class="slide slide-poem">
+                        <a href="#">
+                            <p class="poem">Oтвънка беше шум и светеха реклами. В афиша пишеше: "Една човешка драма. Отвънка беше шум и конника на Крум се потеше от стискане в дланта ми. И стана тъмно. В белия квадрат...</p>
+                            <p class="pull-right peom-author">"Кино" - Никола Вапцаров</p>
+                        </a>
+                    </div>
+                    <div class="slide slide-poem">
+                        <a href="#">
+                            <p class="poem" class="poem">Oстаряват хора и дървета; падат дни, нощи, листа и дъжд; неизменен в есента и летото, камък, ти стоиш все същ!Нямаш нито жили, нито нерви, нямаш нашата злочеста плът. Съвестта и...</p>
+                            <p class="pull-right peom-author">"Камък" - Атанас Далчев</p>
+                        </a>
+                    </div>
+                    <div class="slide slide-poem">
+                        <a href="#">
+                            <p class="poem" class="poem">Oстаряват хора и дървета; падат дни, нощи, листа и дъжд; неизменен в есента и летото, камък, ти стоиш все същ!Нямаш нито жили, нито нерви, нямаш нашата злочеста плът. Съвестта и...</p>
+                            <p class="pull-right peom-author">"Камък" - Атанас Далчев</p>
+                        </a>
+                    </div>
+                    <div class="slide slide-poem">
+                        <a href="#">
+                            <p class="poem" class="poem">Oстаряват хора и дървета; падат дни, нощи, листа и дъжд; неизменен в есента и летото, камък, ти стоиш все същ!Нямаш нито жили, нито нерви, нямаш нашата злочеста плът. Съвестта и...</p>
+                            <p class="pull-right peom-author">"Камък" - Атанас Далчев</p>
+                        </a>
+                    </div>
+                    <div class="slide slide-poem">
+                        <a href="#">
+                            <p class="poem" class="poem">Oстаряват хора и дървета; падат дни, нощи, листа и дъжд; неизменен в есента и летото, камък, ти стоиш все същ!Нямаш нито жили, нито нерви, нямаш нашата злочеста плът. Съвестта и...</p>
+                            <p class="pull-right peom-author">"Камък" - Атанас Далчев</p>
+                        </a>
+                    </div>
+                    <div class="slide slide-poem">
+                        <a href="#">
+                            <p class="poem" class="poem">Oстаряват хора и дървета; падат дни, нощи, листа и дъжд; неизменен в есента и летото, камък, ти стоиш все същ!Нямаш нито жили, нито нерви, нямаш нашата злочеста плът. Съвестта и...</p>
+                            <p class="pull-right peom-author">"Камък" - Атанас Далчев</p>
+                        </a>
+                    </div>
+                    <div class="slide slide-poem">
+                        <a href="#">
+                            <p class="poem" class="poem">Oстаряват хора и дървета; падат дни, нощи, листа и дъжд; неизменен в есента и летото, камък, ти стоиш все същ!Нямаш нито жили, нито нерви, нямаш нашата злочеста плът. Съвестта и...</p>
+                            <p class="pull-right peom-author">"Камък" - Атанас Далчев</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- end .container -->
+        </div>
+        <!-- end .row -->
+
+        <div class="last-tweets">
+            <div class="row">
+                <div class="container">
+                    <ul class="tweets">
+                        <li class="col-xs-6 col-sm-3">
+                            <i class="fa fa-twitter"></i>
+                            TWEET FROM <a href="">@CStudent</a>
+                            <p>Важни дати за провеждане на ДЗИ 2014!!! Дати за провеждане на държавните зрелостни изпити(матури), както следва: <br>
+                            Български език и литература – 21 май, 2014г., начало 8:00ч./ <br>
+                            Втори държавен зрелостен изпит – 23 май, 2014г., начало 8:00ч.</p>
+                            <p class="publ-date">// ПУБЛИКУВАНО ПРЕДИ 4 ДНИ</p>
+                        </li>
+                        <li class="col-xs-6 col-sm-3">
+                            <i class="fa fa-twitter"></i>
+                            TWEET FROM <a href="">@CStudent</a>
+                            <p>Важни дати за провеждане на ДЗИ 2014!!! Дати за провеждане на държавните зрелостни изпити(матури), както следва: <br>
+                            Български език и литература – 21 май, 2014г., начало 8:00ч./ <br>
+                            Втори държавен зрелостен изпит – 23 май, 2014г., начало 8:00ч.</p>
+                            <p class="publ-date">// ПУБЛИКУВАНО ПРЕДИ 4 ДНИ</p>
+                        </li>
+                        <li class="col-xs-6 col-sm-3">
+                            <i class="fa fa-twitter"></i>
+                            TWEET FROM <a href="">@CStudent</a>
+                            <p>Важни дати за провеждане на ДЗИ 2014!!! Дати за провеждане на държавните зрелостни изпити(матури), както следва: <br>
+                            Български език и литература – 21 май, 2014г., начало 8:00ч./ <br>
+                            Втори държавен зрелостен изпит – 23 май, 2014г., начало 8:00ч.</p>
+                            <p class="publ-date">// ПУБЛИКУВАНО ПРЕДИ 4 ДНИ</p>
+                        </li>
+                    </ul>
+                    <!-- end .tweets -->
+                </div>
+                <!-- end .container -->
+            </div>
+            <!-- end .row -->
+        </div>
+        <!-- end .last-tweets -->
+
+        <footer>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="container">
+
+                        <div class="col-xs-6 col-sm-3">
+                            <h1 class="logo">CStudent</h1>
+                            <p>Е уебсайт, който има за цел да помогне на кандидат-студентът, като на едно място е събрал матури от предни години,аудиофайлове на произведенията политература, тестове и др.</p>
+                        </div>
+
+                        <div class="col-xs-6 col-sm-3">
+                            <h3>Instagram</h3>
+                            <iframe src="http://snapwidget.com/in/?u=cGljaG93c2tpaXxpbnw3MHwzfDN8fG5vfDV8ZmFkZUlufG9uU3RhcnR8eWVz&v=1314" title="Instagram Widget" allowTransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:225px; height:225px"></iframe>
+                        </div>
+
+                        <div class="col-xs-6 col-sm-3">
+                            <h3>Тагове</h3>
+                            <ul class="tags">
+                                <li><a href="" class="cloud-tag">роман</a></li>
+                                <li><a href="" class="cloud-tag">повест</a></li>
+                                <li><a href="" class="cloud-tag">матура</a></li>
+                                <li><a href="" class="cloud-tag">Иван Вазов</a></li>
+                                <li><a href="" class="cloud-tag">Гео Милев</a></li>
+                                <li><a href="" class="cloud-tag">стихотворение</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="col-xs-6 col-sm-3 last-news">
+                            <h3>Последни новини</h3>
+
+                            <div class="media">
+                                <a class="pull-left" href="#">
+                                  <img class="media-object" data-src="holder.js/64x64" alt="64x64" src="http://placehold.it/64x64">
+                                </a>
+                                <div class="media-body">
+                                  <h4 class="media-heading">Media heading</h4>
+                                  Cras sit amet nibh libero
+                                  <p><a href="" class="comments">8 коментара</a></p>
+                                </div>
+                            </div>
+
+                            <hr>
+
+                            <div class="media">
+                                <a class="pull-left" href="#">
+                                  <img class="media-object" data-src="holder.js/64x64" alt="64x64" src="http://placehold.it/64x64">
+                                </a>
+                                <div class="media-body">
+                                  <h4 class="media-heading">Media heading</h4>
+                                  Cras sit amet nibh libero
+                                  <p><a href="" class="comments">8 коментара</a></p>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- end .last-news -->
+                    </div>
+                    <!-- end .container -->
+                    <div class="copyright">
+                        <div class="container">
+                            <p>&#64; 2014 Daniel Grigorov All Rights Reserved</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- end .row -->
+            </div>
+            <!-- end .container-fluid -->
+        </footer>
+        <!-- end footer -->
+
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="js/jquery-1.8.2.min.js"></script>
+        <script src="js/plugins.js" type="text/javascript"></script>
+        <script src="js/main.js" type="text/javascript"></script>
+        <script src="js/bootstrap.js" type="text/javascript"></script>
+        <script src="js/classie.js" type="text/javascript"></script>
+        <script src="js/uisearch.js" type="text/javascript"></script>
+        <script src="js/jquery.backstretch.min.js" type="text/javascript"></script>
+        <script src="js/jquery.countdown.js" type="text/javascript"></script>
+        <script src="js/jquery.bxslider.js" type="text/javascript"></script>
+
+
+        <script>
+            new UISearch( document.getElementById( 'sb-search' ) );
+        </script>
+        
+    </body>
+</html>

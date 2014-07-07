@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/normalize.css" type="text/css">
+    <link rel="stylesheet" href="css/main.css" type="text/css">
+    <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.css" type="text/css">
+    <link rel="stylesheet" href="css/book.css" type="text/css">
+
+    <!-- Javascripts -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="js/vendor/modernizr-2.6.2.min.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+        
+            /* 
+            *   We would normally recommend that all JavaScript is kept in a seperate .js file,
+            *   but we have included it in the document head for convenience.
+            */
+            
+            // NICE IMAGE LOADING
+            
+            /* 
+            *   Not part of MixItUp, but this is a great lightweight way 
+            *   to gracefully fade-in images with CSS3 after they have loaded
+            */
+            
+            function imgLoaded(img){    
+                $(img).parent().addClass('loaded');
+            };
+            
+            // ON DOCUMENT READY:
+        
+            $(function(){
+                
+                // INSTANTIATE MIXITUP
+                
+                $('#Books').mixitup({
+                    layoutMode: 'grid', // Start in list mode (display: block) by default
+                    listClass: 'list', // Container class for when in list mode
+                    gridClass: 'grid', // Container class for when in grid mode
+                    effects: ['fade','blur'], // List of effects 
+                    listEffects: ['fade','rotateX'] // List of effects ONLY for list mode
+                });
+                
+                // HANDLE LAYOUT CHANGES
+                
+                // Bind layout buttons to toList and toGrid methods:
+                
+                $('#ToList').on('click',function(){
+                    $('.button').removeClass('active');
+                    $(this).addClass('active');
+                    $('#Books').mixitup('toList');
+                });
+
+                $('#ToGrid').on('click',function(){
+                    $('.button').removeClass('active');
+                    $(this).addClass('active');
+                    $('#Books').mixitup('toGrid');
+                });
+                
+                // HANDLE MULTI-DIMENSIONAL CHECKBOX FILTERING
+                
+                /*  
+                *   The desired behaviour of multi-dimensional filtering can differ greatly 
+                *   from project to project. MixItUp's built in filter button handlers are best
+                *   suited to simple filter operations, so we will need to build our own handlers
+                *   for this demo to achieve the precise behaviour we need.
+                */
+                
+                var $filters = $('#Filters').find('li'),
+                    dimensions = {
+                        region: 'all', // Create string for first dimension
+                        recreation: 'all' // Create string for second dimension
+                    };
+                    
+                // Bind checkbox click handlers:
+                
+                $filters.on('click',function(){
+                    var $t = $(this),
+                        dimension = $t.attr('data-dimension'),
+                        filter = $t.attr('data-filter'),
+                        filterString = dimensions[dimension];
+                        
+                    if(filter == 'all'){
+                        // If "all"
+                        if(!$t.hasClass('active')){
+                            // if unchecked, check "all" and uncheck all other active filters
+                            $t.addClass('active').siblings().removeClass('active');
+                            // Replace entire string with "all"
+                            filterString = 'all';   
+                        } else {
+                            // Uncheck
+                            $t.removeClass('active');
+                            // Emtpy string
+                            filterString = '';
+                        }
+                    } else {
+                        // Else, uncheck "all"
+                        $t.siblings('[data-filter="all"]').removeClass('active');
+                        // Remove "all" from string
+                        filterString = filterString.replace('all','');
+                        if(!$t.hasClass('active')){
+                            // Check checkbox
+                            $t.addClass('active');
+                            // Append filter to string
+                            filterString = filterString == '' ? filter : filterString+' '+filter;
+                        } else {
+                            // Uncheck
+                            $t.removeClass('active');
+                            // Remove filter and preceeding space from string with RegEx
+                            var re = new RegExp('(\\s|^)'+filter);
+                            filterString = filterString.replace(re,'');
+                        };
+                    };
+                    
+                    // Set demension with filterString
+                    dimensions[dimension] = filterString;
+                    
+                    // We now have two strings containing the filter arguments for each dimension:  
+                    console.info('dimension 1: '+dimensions.region);
+                    console.info('dimension 2: '+dimensions.recreation);
+                    
+                    /*
+                    *   We then send these strings to MixItUp using the filter method. We can send as
+                    *   many dimensions to MixitUp as we need using an array as the second argument
+                    *   of the "filter" method. Each dimension must be a space seperated string.
+                    *
+                    *   In this case, MixItUp will show elements using OR logic within each dimension and
+                    *   AND logic between dimensions. At least one dimension must pass for the element to show.
+                    */
+                    
+                    $('#Books').mixitup('filter',[dimensions.region, dimensions.recreation])            
+                });
+
+            });
+        </script>
+
+</head>
+<body class="mat-v2">
+    <div class="top-bar">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5"></div>
+                <ul class="socials col-md-3">
+                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa fa-rss"></i></a></li>
+                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                    <li><a href="#"><i class="fa fa-flickr"></i></a></li>
+                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                </ul>
+                <div class="col-md-5"></div>
+            </div>
+            <!-- end .row -->
+        </div>
+        <!-- end .container -->
+    </div>
+    <!-- end .top-bar -->
+
+    <div class="navbar navbar-inverse container" role="navigation">
+        <div class="col-md-3">
+            <h1>
+                <a href="index.html">
+                    <img src="img/logo.png" alt="CStudent Logo"></a>
+            </h1>
+        </div>
+        <div class="main-menu col-md-9">
+            <ul class="nav nav-pills">
+                <div id="sb-search" class="sb-search">
+                    <form>
+                        <input class="sb-search-input" placeholder="Enter your search term..." type="search" value="" name="search" id="search">
+                        <input class="sb-search-submit" type="submit" value="">
+                        <span class="sb-icon-search"></span>
+                    </form>
+                </div>
+                <li><a href="index.html">Начало</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Материали <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                      <li><a href="materials.html">Материали - в1</a></li>
+                      <li><a href="materials2.html">Материали - в2</a></li>
+                      <li><a href="materials3.html">Материали - в3</a></li>
+                    </ul>
+                </li>
+                <li><a href="universities.html">Унинверситети</a></li>
+                <li><a href="quizes.html">Тестове</a></li>
+                <li><a href="contacts.html">Контакти</a></li>
+            </ul>
+            <!-- end .nav.nav-pills -->
+        </div>
+        <!-- end .navbar-header -->
+    </div>
+    <!-- end .navbar -->
+
+    <div class="title">
+        <div class="container">
+            <h1>Материали</h1>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="container">
+
+                <nav class="controls just">
+                    <div class="group" id="Sorts">
+                        <div class="button" id="ToList"><i></i>List View</div>
+                        <div class="button active" id="ToGrid"><i></i>Grid View</div>
+                    </div>
+                    <div class="group" id="Filters">
+                        <div class="drop_down wf">
+                            <span class="anim150">Автор</span>
+                            <ul class="anim250">
+                                <li class="active" data-filter="all" data-dimension="region">Всички</li>
+                                <li data-filter="h-botev" data-dimension="region">Христо Ботев</li>
+                                <li data-filter="i-vazov" data-dimension="region">Иван Вазов</li>
+                                <li data-filter="g-milev" data-dimension="region">Гео Милев</li>
+                            </ul>
+                        </div>
+                        <div class="drop_down wf">
+                            <span class="anim150">Жанр</span>
+                            <ul class="anim250">
+                                <li class="active" data-filter="all" data-dimension="recreation">Всички</li>
+                                <li data-filter="poema" data-dimension="recreation">Поема</li>
+                                <li data-filter="elegiya" data-dimension="recreation">Елегия</li>
+                                <li data-filter="stihotvorenie" data-dimension="recreation">Стихотворение</li>
+                                <li data-filter="balada" data-dimension="recreation">Балада</li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            <!-- end .container -->
+
+                <ul id="Books" class="just grid" style="     ">
+                
+                    <!-- "TABLE" HEADER CONTAINING SORT BUTTONS (HIDDEN IN GRID MODE)-->
+                    
+                    <div class="list_header">
+                        <div class="meta name active desc">Име</div>
+                        <div class="meta region">Дата на издаване</div>
+                        <div class="meta rec">Герои</div>
+                        <div class="meta area">Жанр</div>
+                    </div>
+                    
+                    <!-- FAIL ELEMENT -->
+                    
+                    <div class="fail_element anim250">Sorry — we could not find any Books matching matching these criteria</div>
+                    
+                    <!-- BEGIN LIST OF Books (MANY OF THESE ELEMENTS ARE VISIBLE ONLY IN LIST MODE)-->
+                    
+                    <li class="mix h-botev stihotvorenie mix_all">
+                        <figure class="book">
+
+                            <!-- Front -->
+
+                            <ul class="hardcover_front">
+                                <div class="coverDesign yellow">
+                                    <span class="ribbon">НОВО</span>
+                                    <h1>"На прощаване"</h1>
+                                    <p>Христо Ботев</p>
+                                </div>
+                                <li></li>
+                            </ul>
+
+                            <!-- Pages -->
+
+                            <ul class="page">
+                                <li></li>
+                                <li>
+                                    <a class="btn read" href="poems/na_proshtavane.html">Прочети</a>
+                                </li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                            </ul>
+
+                            <!-- Back -->
+
+                            <ul class="hardcover_back">
+                                <li></li>
+                                <li></li>
+                            </ul>
+                            <ul class="book_spine">
+                                <li></li>
+                                <li></li>
+                            </ul>
+                            <figcaption>
+                                <h1>На прощаване</h1>
+                                <span>от Христо Ботев</span>
+                                <p>„На прощаване“ е автобиографична изповед от Христо Ботев. За първи път е публикувано в брой 2 на вестник Дума на българските емигранти на 25 юни 1871 г., а по-късно през 1875 г. в издадената съвместно със Стефан Стамболов стихосбирка „Песни и стихотворения от Ботьова и Стамболова“.</p>
+                            </figcaption>
+                        </figure>
+                        <div class="meta name">
+                            <h1>На прощаване</h1>
+                        </div>
+                        <div class="meta region">
+                            <p>I редакция - в. " Дума на българските емигранти", 25 юни 1871 г.</p>
+                            <p>I редакция - стихосбирка „Песни и стихотворения от Ботьова и Стамболова“, 25 юни 1875 г.</p>
+                        </div>
+                        <div class="meta rec">
+                            <ol>
+                                <li>Бунтовникът</li>
+                                <li>Майката</li>
+                            </ol>
+                        </div>
+                        <div class="meta area">
+                            <p>стихотворение</p>
+                        </div>
+                    </li>
+
+                    <li class="mix h-botev stihotvorenie mix_all">
+                        <figure class="book">
+
+                            <!-- Front -->
+
+                            <ul class="hardcover_front">
+                                <div class="coverDesign yellow">
+                                    <span class="ribbon">НОВО</span>
+                                    <h1>"Към брата си"</h1>
+                                    <p>Христо Ботев</p>
+                                </div>
+                                <li></li>
+                            </ul>
+
+                            <!-- Pages -->
+
+                            <ul class="page">
+                                <li></li>
+                                <li>
+                                    <a class="btn read" href="poems/kym_brata_si.html">Прочети</a>
+                                </li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                            </ul>
+
+                            <!-- Back -->
+
+                            <ul class="hardcover_back">
+                                <li></li>
+                                <li></li>
+                            </ul>
+                            <ul class="book_spine">
+                                <li></li>
+                                <li></li>
+                            </ul>
+                            <figcaption>
+                                <h1>Към брата си</h1>
+                                <span>от Христо Ботев</span>
+                                <p>Христо Ботев вплита посланиие в самото заглавие на елегията "Към брата си", което звучи като обръщение към ближния. Обръзът му се възприема, не само като носител на кръвната връзка и част от сакралното пространство на дома, но също и на човек, споделящ идеалите му.</p>
+                            </figcaption>
+                        </figure>
+                        <div class="meta name">
+                            <h1>Към брата си</h1>
+                        </div>
+                        <div class="meta region">
+                            <p>I редакция - в. "Дунавска зора", бр.14 от 12.януари 1868 г.</p>
+                            <p>II редакция - в."Свобода", бр.36 от 30.юли 1870 г.;</p>
+                            <p>III редакция - "Песни и стихотворения", 1875 г.</p>
+                        </div>
+                        <div class="meta rec">
+                            <ol>
+                                <li>лирическият Аз</li>
+                            </ol>
+                        </div>
+                        <div class="meta area">
+                            <p>стихотворение</p>
+                        </div>
+                    </li>
+                    
+                    <li class="mix h-botev stihotvorenie mix_all">
+                        <figure class="book">
+
+                            <!-- Front -->
+
+                            <ul class="hardcover_front">
+                                <div class="coverDesign yellow">
+                                    <span class="ribbon">НОВО</span>
+                                    <h1>"Молитва"</h1>
+                                    <p>Христо Ботев</p>
+                                </div>
+                                <li></li>
+                            </ul>
+
+                            <!-- Pages -->
+
+                            <ul class="page">
+                                <li></li>
+                                <li>
+                                    <a class="btn read" href="poems/moqta_molitva.html">Прочети</a>
+                                </li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                            </ul>
+
+                            <!-- Back -->
+
+                            <ul class="hardcover_back">
+                                <li></li>
+                                <li></li>
+                            </ul>
+                            <ul class="book_spine">
+                                <li></li>
+                                <li></li>
+                            </ul>
+                            <figcaption>
+                                <h1>Молитва</h1>
+                                <span>от Христо Ботев</span>
+                                <p>Ботевата молитва е повелителен, могъщо разгърнат призив за борба, изграден върху антитезното начало на диалога-отрицание между поет и съвременник.</p>
+                            </figcaption>
+                        </figure>
+                        <div class="meta name">
+                            <h1>Молитва</h1>
+                        </div>
+                        <div class="meta region">
+                            <p>1873 г, във в. "Независимост"</p>
+                        </div>
+                        <div class="meta rec">
+                            <ol>
+                                <li>Човекът</li>
+                                <li>Бог</li>
+                            </ol>
+                        </div>
+                        <div class="meta area">
+                            <p>стихотворение</p>
+                        </div>
+                    </li>
+
+                    
+                    <li class="mix h-botev balada mix_all">
+                        <figure class="book">
+
+                            <!-- Front -->
+
+                            <ul class="hardcover_front">
+                                <div class="coverDesign yellow">
+                                    <span class="ribbon">НОВО</span>
+                                    <h1>"Хаджи Димитър"</h1>
+                                    <p>Христо Ботев</p>
+                                </div>
+                                <li></li>
+                            </ul>
+
+                            <!-- Pages -->
+
+                            <ul class="page">
+                                <li></li>
+                                <li>
+                                    <a class="btn read" href="poems/hadji_dimitar.html">Прочети</a>
+                                </li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                            </ul>
+
+                            <!-- Back -->
+
+                            <ul class="hardcover_back">
+                                <li></li>
+                                <li></li>
+                            </ul>
+                            <ul class="book_spine">
+                                <li></li>
+                                <li></li>
+                            </ul>
+                            <figcaption>
+                                <h1>Хаджи Димитър</h1>
+                                <span>от Христо Ботев</span>
+                                <p>Поемата „Хаджи Димитър” е творба, в която конкретността на българско именно назоваване скрива космическото бездъние на лично творческото и колективно митологичното съзнание.</p>
+                            </figcaption>
+                        </figure>
+                        <div class="meta name">
+                            <h1>Хаджи Димитър</h1>
+                        </div>
+                        <div class="meta region">
+                            <p>1873 г, във в. "Независимост"</p>
+                        </div>
+                        <div class="meta rec">
+                            <ol>
+                                <li>Хаджи Димитър</li>
+                            </ol>
+                        </div>
+                        <div class="meta area">
+                            <p>балада</p>
+                        </div>
+                    </li>
+
+                    <li class="mix h-botev elegiya mix_all">
+                        <figure class="book">
+
+                            <!-- Front -->
+
+                            <ul class="hardcover_front">
+                                <div class="coverDesign yellow">
+                                    <span class="ribbon">НОВО</span>
+                                    <h1>"Майце си"</h1>
+                                    <p>Христо Ботев</p>
+                                </div>
+                                <li></li>
+                            </ul>
+
+                            <!-- Pages -->
+
+                            <ul class="page">
+                                <li></li>
+                                <li>
+                                    <a class="btn read" href="poems/maice_si.html">Прочети</a>
+                                </li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                            </ul>
+
+                            <!-- Back -->
+
+                            <ul class="hardcover_back">
+                                <li></li>
+                                <li></li>
+                            </ul>
+                            <ul class="book_spine">
+                                <li></li>
+                                <li></li>
+                            </ul>
+                            <figcaption>
+                                <h1>Майце си</h1>
+                                <span>от Христо Ботев</span>
+                                <p>Това е първото публикувано стихотворение на Ботев във вестник “Гайда”, година трета, брой 19 от 15 април 1876. Ботев пише тази си творба на около 17 годишна възраст в Одеса.</p>
+                            </figcaption>
+                        </figure>
+                        <div class="meta name">
+                            <h1>Майце си</h1>
+                        </div>
+                        <div class="meta region">
+                            <p>1867 г, във в. „Гайда“</p>
+                        </div>
+                        <div class="meta rec">
+                            <ol>
+                                <li>лирическия Аз</li>
+                            </ol>
+                        </div>
+                        <div class="meta area">
+                            <p>елегия</p>
+                        </div>
+                    </li>
+
+                    <li class="mix h-botev elegiya mix_all">
+                        <figure class="book">
+
+                            <!-- Front -->
+
+                            <ul class="hardcover_front">
+                                <div class="coverDesign yellow">
+                                    <span class="ribbon">НОВО</span>
+                                    <h1>"До моето първо либе"</h1>
+                                    <p>Христо Ботев</p>
+                                </div>
+                                <li></li>
+                            </ul>
+
+                            <!-- Pages -->
+
+                            <ul class="page">
+                                <li></li>
+                                <li>
+                                    <a class="btn read" href="poems/pyrvo_libe.html">Прочети</a>
+                                </li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                            </ul>
+
+                            <!-- Back -->
+
+                            <ul class="hardcover_back">
+                                <li></li>
+                                <li></li>
+                            </ul>
+                            <ul class="book_spine">
+                                <li></li>
+                                <li></li>
+                            </ul>
+                            <figcaption>
+                                <h1>До моето първо либе</h1>
+                                <span>от Христо Ботев</span>
+                                <p>До моето първо либе“ е стихотворение от българския поет Христо Ботев. То е публикувано за първи път на 22 юни (10 юни стар стил) 1871 г. в първия брой на издавания от Ботев вестник „Дума на българските емигранти“. През 1875 г. то е включено в издадената съвместно със Стефан Стамболов стихосбирка „Песни и стихотворения от Ботьова и Стамболова“.</p>
+                            </figcaption>
+                        </figure>
+                        <div class="meta name">
+                            <h1>До моето първо либе</h1>
+                        </div>
+                        <div class="meta region">
+                            <p>22 юни (10 юни стар стил) 1871 г, в. „Дума на българските емигранти“</p>
+                        </div>
+                        <div class="meta rec">
+                            <ol>
+                                <li>лирическият Аз</li>
+                            </ol>
+                        </div>
+                        <div class="meta area">
+                            <p>гражданска елегия</p>
+                        </div>
+                    </li>
+
+                    <li class="mix h-botev elegiya mix_all">
+                        <figure class="book">
+
+                            <!-- Front -->
+
+                            <ul class="hardcover_front">
+                                <div class="coverDesign yellow">
+                                    <span class="ribbon">НОВО</span>
+                                    <h1>"Елегия"</h1>
+                                    <p>Христо Ботев</p>
+                                </div>
+                                <li></li>
+                            </ul>
+
+                            <!-- Pages -->
+
+                            <ul class="page">
+                                <li></li>
+                                <li>
+                                    <a class="btn read" href="poems/elegiya.html">Прочети</a>
+                                </li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                            </ul>
+
+                            <!-- Back -->
+
+                            <ul class="hardcover_back">
+                                <li></li>
+                                <li></li>
+                            </ul>
+                            <ul class="book_spine">
+                                <li></li>
+                                <li></li>
+                            </ul>
+                            <figcaption>
+                                <h1>Елегия</h1>
+                                <span>от Христо Ботев</span>
+                                <p>Стихотворението ‘Елегия’ е пределно съкровено, разкриващо драматичните душевни терзания на лирическия герой в порива му да проумее и да намери своето място в живота.</p>
+                            </figcaption>
+                        </figure>
+                        <div class="meta name">
+                            <h1>Елегия</h1>
+                        </div>
+                        <div class="meta region">
+                            <p>8 август 1870 г, в.  „Свобода“</p>
+                        </div>
+                        <div class="meta rec">
+                            <ol>
+                                <li>народът, към когото изпитва гневно състрадание </li>
+                            </ol>
+                        </div>
+                        <div class="meta area">
+                            <p>сатирична елегия</p>
+                        </div>
+                    </li>
+
+                    <li class="mix h-botev elegiya mix_all">
+                        <figure class="book">
+
+                            <!-- Front -->
+
+                            <ul class="hardcover_front">
+                                <div class="coverDesign yellow">
+                                    <span class="ribbon">НОВО</span>
+                                    <h1>"Борба"</h1>
+                                    <p>Христо Ботев</p>
+                                </div>
+                                <li></li>
+                            </ul>
+
+                            <!-- Pages -->
+
+                            <ul class="page">
+                                <li></li>
+                                <li>
+                                    <a class="btn read" href="poems/borba.html">Прочети</a>
+                                </li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                            </ul>
+
+                            <!-- Back -->
+
+                            <ul class="hardcover_back">
+                                <li></li>
+                                <li></li>
+                            </ul>
+                            <ul class="book_spine">
+                                <li></li>
+                                <li></li>
+                            </ul>
+                            <figcaption>
+                                <h1>Борба</h1>
+                                <span>от Христо Ботев</span>
+                                <p>„Борба” е първото стихотворение от цикъла, което не е изповед към майка, баща, либе, народ или приятел. Заглавието е насочено към борбата в най-широк аспект.</p>
+                            </figcaption>
+                        </figure>
+                        <div class="meta name">
+                            <h1>Борба</h1>
+                        </div>
+                        <div class="meta region">
+                            <p>1871 г, в.  „Дума на българските емигранти“</p>
+                        </div>
+                        <div class="meta rec">
+                            <ol>
+                                <li>лирическият Аз</li>
+                            </ol>
+                        </div>
+                        <div class="meta area">
+                            <p>сатирична елегия</p>
+                        </div>
+                    </li>
+
+                    <li class="mix h-botev elegiya mix_all">
+                        <figure class="book">
+
+                            <!-- Front -->
+
+                            <ul class="hardcover_front">
+                                <div class="coverDesign yellow">
+                                    <span class="ribbon">НОВО</span>
+                                    <h1>"Обесването на Васил Левски"</h1>
+                                    <p>Христо Ботев</p>
+                                </div>
+                                <li></li>
+                            </ul>
+
+                            <!-- Pages -->
+
+                            <ul class="page">
+                                <li></li>
+                                <li>
+                                    <a class="btn read" href="poems/obesvaneto.html">Прочети</a>
+                                </li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                            </ul>
+
+                            <!-- Back -->
+
+                            <ul class="hardcover_back">
+                                <li></li>
+                                <li></li>
+                            </ul>
+                            <ul class="book_spine">
+                                <li></li>
+                                <li></li>
+                            </ul>
+                            <figcaption>
+                                <h1>Обесването на Васил Левски</h1>
+                                <span>от Христо Ботев</span>
+                                <p>„Обесването на Васил Левски“ е лирическо произведение на Христо Ботев. Макар че е художествена фикция, то има за повод реално събитие.</p>
+                            </figcaption>
+                        </figure>
+                        <div class="meta name">
+                            <h1>Обесването на Васил Левски</h1>
+                        </div>
+                        <div class="meta region">
+                            <p>I редакция - в. "България", 12 август 1876 г.</p>
+                            <p>II редакция - "Календар за 1876 година"</p>
+                            <p>III редакция - "Съчинения на Христо Ботйов"</p>
+                        </div>
+                        <div class="meta rec">
+                            <ol>
+                                <li>Васил Левски</li>
+                            </ol>
+                        </div>
+                        <div class="meta area">
+                            <p>елегия</p>
+                        </div>
+                    </li>
+
+                    <li class="mix g-milev poema mix_all">
+                        <figure class="book">
+
+                            <!-- Front -->
+
+                            <ul class="hardcover_front">
+                                <div class="coverDesign red">
+                                    <span class="ribbon">НОВО</span>
+                                    <h1>"Септември"</h1>
+                                </div>
+                                <li></li>
+                            </ul>
+
+                            <!-- Pages -->
+
+                            <ul class="page">
+                                <li></li>
+                                <li>
+                                    <a class="btn read" href="#">Прочети</a>
+                                </li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                            </ul>
+
+                            <!-- Back -->
+
+                            <ul class="hardcover_back">
+                                <li></li>
+                                <li></li>
+                            </ul>
+                            <ul class="book_spine">
+                                <li></li>
+                                <li></li>
+                            </ul>
+                            <figcaption>
+                                <h1>Септември</h1>
+                                <span>от Гео Милев</span>
+                                <p>Поемата “Септември” на Гео Милев представлява един пълноценен израз на неразривното единство между философското начало и конкретното историческо такова в неговата поезия.</p>
+                            </figcaption>
+                        </figure>
+                        <div class="meta name">
+                            <h1>Септември</h1>
+                        </div>
+                        <div class="meta region">
+                            <p>1924 г, сп. „Пламък“</p>
+                        </div>
+                        <div class="meta rec">
+                            <ol>
+                                <li>слънчогледите</li>
+                            </ol>
+                        </div>
+                        <div class="meta area">
+                            <p>поема</p>
+                        </div>
+                    </li>
+                    
+                    <!-- END LIST OF Books -->
+                    
+                </ul>
+
+                </ul>
+        </div>
+        <!-- end .row -->
+    </div>
+    <!-- end .container-fluid -->
+
+    <footer>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="container">
+
+                    <div class="col-xs-6 col-sm-3">
+                        <h1 class="logo">CStudent</h1>
+                        <p>Е уебсайт, който има за цел да помогне на кандидат-студентът, като на едно място е събрал матури от предни години,аудиофайлове на произведенията политература, тестове и др.</p>
+                    </div>
+
+                    <div class="col-xs-6 col-sm-3">
+                        <h3>Instagram</h3>
+                        <iframe src="http://snapwidget.com/in/?u=cGljaG93c2tpaXxpbnw3MHwzfDN8fG5vfDV8ZmFkZUlufG9uU3RhcnR8eWVz&v=1314" title="Instagram Widget" allowtransparency="true" frameborder="0" scrolling="no" style="border: none; overflow: hidden; width: 225px; height: 225px"></iframe>
+                    </div>
+
+                    <div class="col-xs-6 col-sm-3">
+                        <h3>Тагове</h3>
+                        <ul class="tags">
+                            <li><a href="" class="cloud-tag">роман</a></li>
+                            <li><a href="" class="cloud-tag">повест</a></li>
+                            <li><a href="" class="cloud-tag">матура</a></li>
+                            <li><a href="" class="cloud-tag">Иван Вазов</a></li>
+                            <li><a href="" class="cloud-tag">Гео Милев</a></li>
+                            <li><a href="" class="cloud-tag">стихотворение</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-xs-6 col-sm-3 last-news">
+                        <h3>Последни новини</h3>
+
+                        <div class="media">
+                            <a class="pull-left" href="#">
+                                <img class="media-object" data-src="holder.js/64x64" alt="64x64" src="http://placehold.it/64x64">
+                            </a>
+                            <div class="media-body">
+                                <h4 class="media-heading">Media heading</h4>
+                                Cras sit amet nibh libero
+                                  <p><a href="" class="comments">8 коментара</a></p>
+                            </div>
+                        </div>
+
+                        <hr>
+
+                        <div class="media">
+                            <a class="pull-left" href="#">
+                                <img class="media-object" data-src="holder.js/64x64" alt="64x64" src="http://placehold.it/64x64">
+                            </a>
+                            <div class="media-body">
+                                <h4 class="media-heading">Media heading</h4>
+                                Cras sit amet nibh libero
+                                  <p><a href="" class="comments">8 коментара</a></p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- end .last-news -->
+                </div>
+                <!-- end .container -->
+                <div class="copyright">
+                    <div class="container">
+                        <p>&#64; 2014 Daniel Grigorov All Rights Reserved</p>
+                    </div>
+                </div>
+            </div>
+            <!-- end .row -->
+        </div>
+        <!-- end .container-fluid -->
+    </footer>
+    <!-- end footer -->
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/jquery-1.8.2.min.js"></script>
+    <script src="js/plugins.js" type="text/javascript"></script>
+    <script src="js/bootstrap.js" type="text/javascript"></script>
+    <script src="js/classie.js" type="text/javascript"></script>
+    <script src="js/uisearch.js" type="text/javascript"></script>
+    <script src="js/jquery.mixitup.js" type="text/javascript"></script>
+    <script src="js/jquery-ui.sortable.min.js" type="text/javascript"></script>
+
+    <script>
+        new UISearch(document.getElementById('sb-search'));
+    </script>
+
+</body>
+</html>

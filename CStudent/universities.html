@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/normalize.css" type="text/css">
+    <link rel="stylesheet" href="css/main.css" type="text/css">
+    <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.css" type="text/css">
+    <link rel="stylesheet" href="css/book.css" type="text/css">
+    <link rel="stylesheet" href="css/pfold.css" type="text/css" />
+
+    <!-- Javascripts -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="js/vendor/modernizr-2.6.2.min.js" type="text/javascript"></script>
+
+    <script>
+        $(function () {
+            $('#Uni').mixItUp();
+        });
+    </script>
+
+</head>
+<body class="mat-v2">
+    <div class="top-bar">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5"></div>
+                <ul class="socials col-md-3">
+                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa fa-rss"></i></a></li>
+                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                    <li><a href="#"><i class="fa fa-flickr"></i></a></li>
+                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                </ul>
+                <div class="col-md-5"></div>
+            </div>
+            <!-- end .row -->
+        </div>
+        <!-- end .container -->
+    </div>
+    <!-- end .top-bar -->
+
+    <div class="navbar navbar-inverse container" role="navigation">
+        <div class="col-md-3">
+            <h1>
+                <a href="index.html">
+                    <img src="img/logo.png" alt="CStudent Logo"></a>
+            </h1>
+        </div>
+        <div class="main-menu col-md-9">
+            <ul class="nav nav-pills">
+                <div id="sb-search" class="sb-search">
+                    <form>
+                        <input class="sb-search-input" placeholder="Enter your search term..." type="search" value="" name="search" id="search">
+                        <input class="sb-search-submit" type="submit" value="">
+                        <span class="sb-icon-search"></span>
+                    </form>
+                </div>
+                <li><a href="index.html">Начало</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Материали <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="materials.html">Материали - в1</a></li>
+                        <li><a href="materials2.html">Материали - в2</a></li>
+                        <li><a href="materials3.html">Материали - в3</a></li>
+                    </ul>
+                </li>
+                <li><a href="universities.html">Унинверситети</a></li>
+                <li><a href="quizes.html">Тестове</a></li>
+                <li><a href="contacts.html">Контакти</a></li>
+            </ul>
+            <!-- end .nav.nav-pills -->
+        </div>
+        <!-- end .navbar-header -->
+    </div>
+    <!-- end .navbar -->
+
+    <div class="title">
+        <div class="container">
+            <h1>Университети</h1>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="container">
+
+                <div class="controls-uni">
+                    <label>Филтър:</label>
+
+                    <button type="button" class="btn btn-default filter active" data-filter="all">Всички</button>
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-default">Специалност</button>
+                      <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                        <span class="caret"></span>
+                      </button>
+                      <ul class="dropdown-menu" role="menu">
+                        <li class="filter" data-filter=".admin"><a href="#">Администрация и управление</a></li>
+                        <li class="filter" data-filter=".anime"><a href="#">Анимационно кино</a></li>
+                        <li class="filter" data-filter=".bus-admin"><a href="#">Бизнес администрация</a></li>
+                        <li class="filter" data-filter=".bio"><a href="#">Биология</a></li>
+                        <li class="filter" data-filter=".geodeziya"><a href="#">Геодезия</a></li> 
+                        <li class="filter" data-filter=".electronic"><a href="#">Електроника</a></li>
+                        <li class="filter" data-filter=".eletrotechnical"><a href="#">Електротехника</a></li>
+                        <li class="filter" data-filter=".indus-engin"><a href="#">Индустриално инженерство</a></li> 
+                        <li class="filter" data-filter=".informatic"><a href="#">Информатика</a></li>
+                        <li class="filter" data-filter=".info-systems"><a href="#">Информационни системи</a></li>
+                        <li class="filter" data-filter=".comp-science"><a href="#">Компютърни науки</a></li> 
+                        <li class="filter" data-filter=".marketing"><a href="#">Маркетинг</a></li>                  
+                        <li class="filter" data-filter=".polit-economy"><a href="#">Политическа икономия</a></li>
+                        <li class="filter" data-filter=".sss"><a href="#">Строителство на сгради и съоръжения</a></li>  
+                        <li class="filter" data-filter=".scheto"><a href="#">Счетоводство и контрол</a></li> 
+                        <li class="filter" data-filter=".uuzi"><a href="#">Устройство и управление на земи и имоти</a></li>  
+                      </ul>
+                    </div>
+                </div>
+                <!-- end .controls-uni -->
+
+                <section class="main demo-2" id="Uni">
+                    <div id="grid" class="grid clearfix just">
+                        <div class="mix informatic info-systems comp-science uc-container" data-myorder="1" style="display: inline-block;">
+                            <div class="uc-initial-content">
+                                <img src="img/thumbs/1.jpg" alt="image01" />
+                                <span class="icon-eye"></span>
+                            </div>
+                            <div class="uc-final-content">
+                                <img src="img/large/1.jpg" alt="image01-large" />
+                                <div class="title">
+                                    <h4>Софийски университет „Св. Климент Охридски”</h4>
+                                    <a href="https://www.uni-sofia.bg/index.php/bul/obrazovanie/bakalav_rski_programi" class="icon-link" target="_blank"></a>
+                                </div>
+                                <span class="icon-cancel"></span>
+                            </div>
+                        </div>
+                        <div class="mix informatic anime marketing admin bus-admin scheto uc-container" data-myorder="2" style="display: inline-block;">
+                            <div class="uc-initial-content">
+                                <img src="img/thumbs/2.jpg" alt="image02" />
+                                <span class="icon-eye"></span>
+                            </div>
+                            <div class="anime uc-final-content">
+                                <img src="img/large/2.jpg" alt="image02-large" />
+                                <div class="title">
+                                    <h4>Нов български университет</h4>
+                                    <a href="http://www.nbu.bg/index.php?l=3795" class="icon-link" target="_blank"></a>
+                                </div>
+                                <span class="icon-cancel"></span>
+                            </div>
+                        </div>
+                        <div class="mix marketing polit-economy scheto uc-container" data-myorder="3" style="display: inline-block;">
+                            <div class="uc-initial-content">
+                                <img src="img/thumbs/3.jpg" alt="image03" />
+                                <span class="icon-eye"></span>
+                            </div>
+                            <div class="uc-final-content">
+                                <img src="img/large/3.jpg" alt="image03-large" />
+                                <div class="title">
+                                    <h4>Университет за национално и световно стопанство</h4>
+                                    <a href="http://priem.unwe.bg/" class="icon-link" target="_blank"></a>
+                                </div>
+                                <span class="icon-cancel"></span>
+                            </div>
+                        </div>
+                        <div class="mix marketing scheto uc-container" data-myorder="4" style="display: inline-block;">
+                            <div class="uc-initial-content">
+                                <img src="img/thumbs/4.jpg" alt="image04" />
+                                <span class="icon-eye"></span>
+                            </div>
+                            <div class="uc-final-content">
+                                <img src="img/large/4.jpg" alt="image04-large" />
+                                <div class="title">
+                                    <h4>Югозападен университет „Неофит Рилски” - Благоевград</h4>
+                                    <a href="http://www.swu.bg/information-for/prospective-students/admission-2014.aspx" class="icon-link" target="_blank"></a>
+                                </div>
+                                <span class="icon-cancel"></span>
+                            </div>
+                        </div>
+                        <div class="mix geodeziya sss uuzi uc-container" data-myorder="5" style="display: inline-block;">
+                            <div class="uc-initial-content">
+                                <img src="img/thumbs/5.jpg" alt="image05" />
+                                <span class="icon-eye"></span>
+                            </div>
+                            <div class="uc-final-content">
+                                <img src="img/large/5.jpg" alt="image05-large" />
+                                <div class="title">
+                                    <h4>Университет по архитектура, строителство и геодезия</h4>
+                                    <a href="http://uacg.bg/?p=35" class="icon-link" target="_blank"></a>
+                                </div>
+                                <span class="icon-cancel"></span>
+                            </div>
+                        </div>
+                        <div class="mix electronic eletrotechnical indus-engin uc-container" data-myorder="6" style="display: inline-block;">
+                            <div class="uc-initial-content">
+                                <img src="img/thumbs/6.jpg" alt="image06" />
+                                <span class="icon-eye"></span>
+                            </div>
+                            <div class="uc-final-content">
+                                <img src="img/large/6.jpg" alt="image06-large" />
+                                <div class="title">
+                                    <h4>Технически университет – София</h4>
+                                    <a href="http://priem.tu-sofia.bg/" class="icon-link" target="_blank"></a>
+                                </div>
+                                <span class="icon-cancel"></span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- end #Uni -->
+
+                <div class="gap"></div>
+                <div class="gap"></div>
+            </div>
+            <!-- end .container -->
+
+        </div>
+        <!-- end .row -->
+    </div>
+    <!-- end .container-fluid -->
+
+    <footer>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="container">
+
+                    <div class="col-xs-6 col-sm-3">
+                        <h1 class="logo">CStudent</h1>
+                        <p>Е уебсайт, който има за цел да помогне на кандидат-студентът, като на едно място е събрал матури от предни години,аудиофайлове на произведенията политература, тестове и др.</p>
+                    </div>
+
+                    <div class="col-xs-6 col-sm-3">
+                        <h3>Instagram</h3>
+                        <iframe src="http://snapwidget.com/in/?u=cGljaG93c2tpaXxpbnw3MHwzfDN8fG5vfDV8ZmFkZUlufG9uU3RhcnR8eWVz&v=1314" title="Instagram Widget" allowtransparency="true" frameborder="0" scrolling="no" style="border: none; overflow: hidden; width: 225px; height: 225px"></iframe>
+                    </div>
+
+                    <div class="col-xs-6 col-sm-3">
+                        <h3>Тагове</h3>
+                        <ul class="tags">
+                            <li><a href="" class="cloud-tag">роман</a></li>
+                            <li><a href="" class="cloud-tag">повест</a></li>
+                            <li><a href="" class="cloud-tag">матура</a></li>
+                            <li><a href="" class="cloud-tag">Иван Вазов</a></li>
+                            <li><a href="" class="cloud-tag">Гео Милев</a></li>
+                            <li><a href="" class="cloud-tag">стихотворение</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-xs-6 col-sm-3 last-news">
+                        <h3>Последни новини</h3>
+
+                        <div class="media">
+                            <a class="pull-left" href="#">
+                                <img class="media-object" data-src="holder.js/64x64" alt="64x64" src="http://placehold.it/64x64">
+                            </a>
+                            <div class="media-body">
+                                <h4 class="media-heading">Media heading</h4>
+                                Cras sit amet nibh libero
+                                  <p><a href="" class="comments">8 коментара</a></p>
+                            </div>
+                        </div>
+
+                        <hr>
+
+                        <div class="media">
+                            <a class="pull-left" href="#">
+                                <img class="media-object" data-src="holder.js/64x64" alt="64x64" src="http://placehold.it/64x64">
+                            </a>
+                            <div class="media-body">
+                                <h4 class="media-heading">Media heading</h4>
+                                Cras sit amet nibh libero
+                                  <p><a href="" class="comments">8 коментара</a></p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- end .last-news -->
+                </div>
+                <!-- end .container -->
+                <div class="copyright">
+                    <div class="container">
+                        <p>&#64; 2014 Daniel Grigorov All Rights Reserved</p>
+                    </div>
+                </div>
+            </div>
+            <!-- end .row -->
+        </div>
+        <!-- end .container-fluid -->
+    </footer>
+    <!-- end footer -->
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/jquery-1.8.2.min.js"></script>
+    <script src="js/plugins.js" type="text/javascript"></script>
+    <script src="js/bootstrap.js" type="text/javascript"></script>
+    <script src="js/classie.js" type="text/javascript"></script>
+    <script src="js/uisearch.js" type="text/javascript"></script>
+    <script src="http://cdn.jsdelivr.net/jquery.mixitup/latest/jquery.mixitup.min.js"></script>
+    <script src="js/jquery.pfold.js" type="text/javascript"></script>
+
+    <script>
+        new UISearch(document.getElementById('sb-search'));
+    </script>
+
+    <script type="text/javascript">
+        $(function () {
+
+            // say we want to have only one item opened at one moment
+            var opened = false;
+
+            $('#grid > div.uc-container').each(function (i) {
+
+                var $item = $(this), direction;
+
+                switch (i) {
+                    case 0: direction = ['right', 'bottom']; break;
+                    case 1: direction = ['left', 'bottom']; break;
+                    case 2: direction = ['right', 'top']; break;
+                    case 3: direction = ['left', 'top']; break;
+                }
+
+                var pfold = $item.pfold({
+                    folddirection: direction,
+                    speed: 300,
+                    onEndFolding: function () { opened = false; },
+                });
+
+                $item.find('span.icon-eye').on('click', function () {
+
+                    if (!opened) {
+                        opened = true;
+                        pfold.unfold();
+                    }
+
+
+                }).end().find('span.icon-cancel').on('click', function () {
+
+                    pfold.fold();
+
+                });
+
+            });
+
+        });
+    </script>
+
+</body>
+</html>
