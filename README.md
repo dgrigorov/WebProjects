@@ -27,6 +27,7 @@ Web Templates
 ## Acceptance Criteria
 Define a list of boundaries in a simple language of the user story which are used for testing and to confirm when the user story is completed and working as intended.  
 Check if:
+
 1. 
 2. 
 
