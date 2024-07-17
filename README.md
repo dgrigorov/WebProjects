@@ -14,8 +14,8 @@ Web Templates
 # User Story
 
 **As a**  
-I want to  
-So that  
+**I want to**
+**So that**
 
 ## Functionality
 
